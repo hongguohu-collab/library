@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 14: Solvent-Induced Side Reactions · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第14章（原书Ch14）</b></div><h2 class="pt">Chapter 14: Solvent-Induced Side Reactions</h2><div class="meta">图示 0 张 · 笔记约 37 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#14-1-dcm">14.1 DCM诱导的副反应</a><a href="#14-2-dmf">14.2 DMF诱导的副反应</a><a href="#14-3">14.3 甲醇/乙醇诱导的副反应</a><a href="#14-4">14.4 乙腈诱导的副反应</a><a href="#14-5">14.5 丙酮诱导的副反应</a><a href="#14-6-mtbe">14.6 MTBE诱导的副反应</a><a href="#14-7-tfe">14.7 TFE诱导的副反应</a><a href="#s">本章要点总结</a></div><p style="text-align:center;font-weight:700">Chapter 14: Solvent-Induced Side Reactions</p><p>（溶剂诱导的副反应）</p><h2 id=14-1-dcm>14.1 DCM诱导的副反应</h2><p>DCM可与哌啶反应，生成1-(氯甲基)哌啶盐酸盐→1,1&#x27;-亚甲基双(哌啶)二盐酸盐和哌啶盐酸盐结晶。这会消耗哌啶导致Fmoc脱保护不完全，且放热反应对大规模生产不利。</p><p>建议：避免使用哌啶/DCM溶液进行Fmoc脱保护，尤其在大规模生产中。</p><h2 id=14-2-dmf>14.2 DMF诱导的副反应</h2><p>DMF可降解产生二甲胺（污染源），已在Chapter 10中讨论其对Fmoc的影响。此外：</p><p>• DMF在Vilsmeier-Haack反应条件下可生成活性氯代亚铵离子，与氨基酸反应形成N-氯甲酰氨基酸氯化物，阻断NCA形成</p><p>• NCA制造中应避免DMF污染</p><h2 id=14-3>14.3 甲醇/乙醇诱导的副反应</h2><h3 id=14-3-1>14.3.1 酯化副反应</h3><p>甲醇在酸催化下可使肽Asp/Glu侧链羧基或C端羧基甲酯化。RP-HPLC纯化中甲醇+TFA浓缩时可触发此副反应。树脂洗涤后残留甲醇也可在TFA裂解时引发酯化。</p><h3 id=14-3-2-n>14.3.2 催化氢化中的N-烷基化</h3><p>催化氢化（Pd催化剂）在甲醇中进行时，若体系含氧，甲醇可被氧化为甲醛→与游离氨基形成Schiff碱→原位还原为N-烷基胺（二甲基化产物）。</p><h2 id=14-4>14.4 乙腈诱导的副反应</h2><p>• 乙腈中可能残留HCN（来自丙烯腈制造副产物或热降解），HCN可与肽中酮羰基亲核加成形成氰醇（+27 amu）</p><p>• 乙腈水解生成乙酰胺→乙酸，乙酸可能引发乙酰化副反应</p><p>• 对大多数肽影响较小，但在特定条件下（乙腈质量差、pH高、温度高）可能加剧</p><h2 id=14-5>14.5 丙酮诱导的副反应</h2><p>• 丙酮与N端His反应形成N-(prop-1-en-2-yl)修饰（+40 amu）（详见Chapter 7.4.4）</p><p>• 丙酮与N端伯胺+第一个酰胺键的肽形成咪唑烷酮（imidazolidinone）（+40 amu）</p><p>• 氨氧基肽（aminooxy peptide）可与微量丙酮/甲醛形成肟（oxime）杂质</p><p>• 注意：浓H₂O₂与丙酮混合可形成爆炸性过氧化物！</p><h2 id=14-6-mtbe>14.6 MTBE诱导的副反应</h2><p>MTBE在强酸（如TFMSA）存在下可作为烷基化试剂，通过异丁烯中间体对Trp、Tyr、Cys、Met等残基进行叔丁基化。当TFA中无强辅助酸时，叔丁基化程度明显降低。</p><p>解决方案：在强酸条件下用乙醚替代MTBE作为抗溶剂。</p><h2 id=14-7-tfe>14.7 TFE诱导的副反应</h2><p>TFE（三氟乙醇）中可能含有TFA或三氟乙酸酯杂质，可引发Lys-Nε三氟乙酰化。此外，TFE中的乙醛杂质可导致Schiff碱副产物（+26 amu）。</p><h2 id=s>本章要点总结</h2><p><strong>1. DCM+哌啶→结晶副产物，应避免使用哌啶/DCM溶液。</strong></p><p><strong>2. DMF降解产生二甲胺，影响Fmoc稳定性；DMF污染阻断NCA形成。</strong></p><p><strong>3. 甲醇在酸催化下可酯化Asp/Glu和C端；催化氢化中可N-烷基化。</strong></p><p><strong>4. 乙腈中HCN可形成氰醇副产物；丙酮可形成咪唑烷酮和肟杂质。</strong></p><p><strong>5. MTBE在强酸下可叔丁基化敏感残基；TFE杂质可三氟乙酰化Lys。</strong></p><p><strong>6. 总原则：控制溶剂质量、避免不当溶剂组合、关注溶剂杂质。</strong></p></div><div class="pn"><a href="ch13.html"><b>← 上一章</b><span>Chapter 13: Cys Disulfide-Related Side Reactions</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

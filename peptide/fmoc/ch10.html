@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>1. 引言：为什么需要肽-载体偶联物 · Fmoc 固相多肽合成：实用指南</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../fmoc.html">Fmoc 固相多肽合成：实用指南</a> › <b>第10章（原书Ch10）</b></div><h2 class="pt">1. 引言：为什么需要肽-载体偶联物</h2><div class="meta">图示 2 张 · 笔记约 842 KB · 来源《Fmoc Solid Phase Peptide Synthesis: A Practical Approach》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#1">1. 引言：为什么需要肽-载体偶联物</a><a href="#2-homobifunctional-cross-linkers">2. 同型双功能交联剂（Homobifunctional Cross-linkers）</a><a href="#3-heterobifunctional-cross-linkers">3. 异型双功能交联剂（Heterobifunctional Cross-linkers）——推荐方法</a><a href="#4-map-multiple-antigenic-peptide">4. MAP（Multiple Antigenic Peptide）多抗原肽策略</a><a href="#5">5. 实用考虑与优化策略</a></div><p><strong>第十章  肽-载体偶联物制备方法</strong></p><p><em>Methods of Preparing Peptide-Carrier Conjugates</em></p><p>作者：J. W. Drijfhout &amp; P. Hoogerhout</p><p>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p><h2 id=1>1. 引言：为什么需要肽-载体偶联物</h2><p>在免疫学研究中，小肽（通常&lt;20个残基）自身往往无法引起足够的免疫反应——它们分子量太小、缺乏T细胞表位（T-cell epitopes）、在体内快速清除，因此免疫原性（immunogenicity）很弱。为了产生针对特定肽序列的抗体，需要将肽（hapten，半抗原）偶联（conjugate）到载体蛋白（carrier protein）上，形成肽-载体偶联物（peptide-carrier conjugate）。</p><p>常用的载体蛋白包括：</p><table><tr><th>载体蛋白</th><th>缩写</th><th>特点</th></tr><tr><td>Keyhole Limpet Hemocyanin</td><td>KLH</td><td>巨大分子（~4.5×10^5-1.3×10^7 Da），免疫原性最强，最常用</td></tr><tr><td>Bovine Serum Albumin</td><td>BSA</td><td>分子量~67 kDa，溶解性好，价格低廉</td></tr><tr><td>Tetanus Toxoid</td><td>TT</td><td>破伤风类毒素，提供强T细胞辅助</td></tr><tr><td>Diphtheria Toxoid</td><td>DT</td><td>白喉类毒素，类似TT</td></tr><tr><td>Ovalbumin</td><td>OVA</td><td>鸡卵白蛋白，~45 kDa，常用于实验研究</td></tr></table><p>选择载体蛋白的考虑因素：分子量大小（大分子更佳）、溶解性、可用氨基/巯基数量、与肽序列的兼容性，以及是否与实验体系存在交叉反应（cross-reactivity）。</p><h2 id=2-homobifunctional-cross-linkers>2. 同型双功能交联剂（Homobifunctional Cross-linkers）</h2><h3 id=2-1-glutaraldehyde>2.1 戊二醛（Glutaraldehyde）法</h3><p>戊二醛（glutaraldehyde, GA）是最经典的同型双功能交联剂，两端各有一个醛基，可以分别与载体蛋白和肽上的氨基（Lys ε-氨基或N端α-氨基）形成Schiff碱（Schiff base）。</p><p>反应机制：</p><p>醛基 + 蛋白-NH2 → Schiff碱（-CH=N-）→ 还原（NaBH4或NaCNBH3）→ 稳定二级胺键；</p><p>理论上戊二醛两端分别连接载体和肽，但实际上两端功能基相同，极易产生载体-载体自身交联和肽-肽聚合。</p><p>戊二醛法的缺点：</p><p>无法控制连接方向：两端都是醛基，载体蛋白之间也会交联形成大聚集体；</p><p>容易导致载体蛋白变性和沉淀；</p><p>Schiff碱不还原则不稳定（可逆），还原后可能改变蛋白构象；</p><p>偶联位点随机（任何Lys残基都可能参与），产物不均一。</p><h3 id=2-2>2.2 同型双功能试剂的固有缺陷</h3><p>所有同型双功能交联剂（包括戊二醛、DSS、BS3等）都有一个根本性缺陷：两个反应端基相同，无法区分载体蛋白和肽。这导致：</p><p>载体蛋白-载体蛋白自身交联（self-conjugation），形成高分子量聚集体；</p><p>肽-肽聚合，降低有效偶联效率；</p><p>产物组成不均一，难以表征和重复；</p><p>因此，本章明确建议：不推荐使用同型双功能试剂制备肽-载体偶联物。</p><h2 id=3-heterobifunctional-cross-linkers>3. 异型双功能交联剂（Heterobifunctional Cross-linkers）——推荐方法</h2><p>异型双功能交联剂是制备肽-载体偶联物的首选。其两端具有不同的反应基团：一端与载体蛋白反应，另一端与肽反应，从而实现定向偶联（directional conjugation），避免了自身交联问题。</p><h3 id=3-1-spdp-n-3-2>3.1 SPDP法（N-琥珀酰亚胺基-3-(2-吡啶基二硫)丙酸酯）</h3><p>SPDP（N-succinimidyl 3-(2-pyridyldithio)propionate）是最经典的异型双功能交联剂之一。其工作原理：</p><p>Step 1: SPDP的NHS酯端与载体蛋白上的Lys ε-氨基反应，引入2-吡啶基二硫基（pyridyl disulfide）；</p><p>Step 2: 肽C端或侧链的游离巯基（Cys-SH）与载体上的吡啶基二硫基发生交换反应，形成稳定的二硫键（disulfide bond）；</p><p>释放出的2-硫吡啶酮（pyridone）在343nm有特征吸收，可用于定量监测偶联程度。</p><p>SPDP法的优势：</p><p>两步反应，分别修饰载体和肽，避免交叉反应；</p><p>二硫键稳定但在还原条件下可逆，有时可用于可裂解偶联物；</p><p>通过343nm吸光度可方便地监控反应进程。</p><p>SPDP法的局限：</p><p>需要在肽序列中引入Cys残基（如果没有天然的Cys）；</p><p>二硫键在体内可被还原，不适合需要长期稳定的偶联物；</p><p>Cys的巯基需要保持还原态，氧化条件下会形成二聚体。</p><h3 id=3-2-mbs-m-n>3.2 MBS法（m-马来酰亚胺基苯甲酰-N-琥珀酰亚胺酯）</h3><p>MBS（m-maleimidobenzoyl-N-hydroxysuccinimide ester）是另一种重要的异型双功能交联剂。其一端为NHS酯（与氨基反应），另一端为马来酰亚胺（maleimide，与巯基反应）。</p><figure><img loading="lazy" src="../../media/fmoc/ch10/ch10_01.png" alt="图示"></figure><p><em>Figure 1. (a) 巯基-马来酰亚胺偶联机制  (b) 2-吡啶基二硫键偶联机制</em></p><p>MBS法的工作流程：</p><p>Step 1: MBS的NHS酯端与载体蛋白的Lys ε-氨基反应，将maleimide基团引入载体；</p><p>Step 2: 含有游离Cys-SH的肽与载体上的maleimide反应，形成稳定的硫醚键（thioether bond）；</p><p>硫醚键不可逆，比二硫键更稳定，适合体内实验。</p><p>MBS法的优势：</p><p>形成稳定的硫醚键，不可逆，适合体内长期实验；</p><p>Maleimide与巯基的反应具有高度选择性，在pH 6.5-7.5条件下几乎不与氨基反应；</p><p>产物均一，表征容易。</p><h3 id=3-3-mbs-sulfo-mbs>3.3 磺基-MBS（Sulfo-MBS）：水溶性改进</h3><p>MBS本身是疏水的，需要先溶于有机溶剂（DMF或DMSO）再加入水相。磺基-MBS（sulfo-MBS）在MBS分子上引入了磺酸基团，使其具有良好的水溶性，可以直接溶于水相缓冲液。</p><p>优势：避免了有机溶剂对蛋白的潜在变性作用；</p><p>适合对有机溶剂敏感的载体蛋白；</p><p>操作更简便，减少了操作步骤。</p><h3 id=3-4-2>3.4 2-吡啶基二硫键法</h3><p>此法与SPDP法的化学原理类似，但使用不同的试剂实现。载体蛋白先用2-吡啶基二硫试剂修饰，引入活性二硫键，然后与含Cys的肽反应形成二硫键连接。</p><p>与MBS法的硫醚键相比，二硫键的主要区别：</p><table><tr><th>特征</th><th>二硫键（Disulfide）</th><th>硫醚键（Thioether, MBS法）</th></tr><tr><td>稳定性</td><td>还原条件下可裂解</td><td>不可逆，高度稳定</td></tr><tr><td>体内应用</td><td>可被还原酶裂解</td><td>持久存在</td></tr><tr><td>监测方式</td><td>343nm吡啶酮释放</td><td>需SDS-PAGE或质谱</td></tr><tr><td>适用场景</td><td>需要可裂解连接时</td><td>需要稳定持久连接时</td></tr></table><h3 id=3-5-bromoacetylation>3.5 溴乙酰化法（Bromoacetylation）</h3><p>溴乙酰化法（bromoacetylation）是另一种将肽连接到载体上的策略：</p><p>Step 1: 用溴乙酸NHS酯（bromoacetic acid NHS ester, BrAc-NHS）修饰载体蛋白的氨基，引入溴乙酰基（bromoacetyl group）；</p><p>Step 2: 含游离Cys-SH的肽与溴乙酰基反应，形成稳定的硫醚键；</p><p>反应在弱碱性条件（pH 7.5-8.5）下进行。</p><p>溴乙酰化法的优势：试剂简单、价格低廉；局限：溴乙酰基在高温或强碱条件下可能与组氨酸（His）的咪唑基或赖氨酸（Lys）的氨基发生副反应。</p><h3 id=3-6>3.6 异型双功能交联剂比较总结</h3><table><tr><th>方法</th><th>连接键类型</th><th>稳定性</th><th>需要Cys</th><th>特点</th></tr><tr><td>SPDP</td><td>二硫键</td><td>可裂解</td><td>是</td><td>343nm可监测；体内可被还原</td></tr><tr><td>MBS</td><td>硫醚键</td><td>不可逆</td><td>是</td><td>稳定持久；需有机溶剂助溶</td></tr><tr><td>Sulfo-MBS</td><td>硫醚键</td><td>不可逆</td><td>是</td><td>水溶性改进的MBS</td></tr><tr><td>2-吡啶基二硫</td><td>二硫键</td><td>可裂解</td><td>是</td><td>类似SPDP原理</td></tr><tr><td>BrAc-NHS</td><td>硫醚键</td><td>不可逆</td><td>是</td><td>试剂简单便宜；可能有副反应</td></tr></table><h2 id=4-map-multiple-antigenic-peptide>4. MAP（Multiple Antigenic Peptide）多抗原肽策略</h2><h3 id=4-1-map>4.1 MAP的概念与设计</h3><p>MAP（Multiple Antigenic Peptide，多抗原肽）是一种创新策略，由Tam提出。它不需要载体蛋白，而是使用赖氨酸（Lysine）树枝状核心（dendritic core）作为支架，将多个相同或不同的肽链连接在核心上，形成树枝状大分子。</p><figure><img loading="lazy" src="../../media/fmoc/ch10/ch10_02.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 2. MAP核心结构示意图——赖氨酸树枝状骨架</em></p><h3 id=4-2-map>4.2 MAP的构建</h3><p>MAP的构建直接在SPPS树脂上完成，核心是利用赖氨酸的α-氨基和ε-氨基分别延伸两条肽链：</p><p>第1层（1st generation）：1个Lys核心 → 2个分支（2-mer MAP）；</p><p>第2层（2nd generation）：在上述2个分支各加1个Lys → 4个分支（4-mer MAP）；</p><p>第3层（3rd generation）：在4个分支各加1个Lys → 8个分支（8-mer MAP）；</p><p>最常用的是4-mer和8-mer MAP，分子量通常达到10-20 kDa，足以引起免疫反应。</p><h3 id=4-3-map>4.3 MAP的优势</h3><p>无需载体蛋白：避免了载体引起的交叉反应；</p><p>直接在SPPS中构建：与肽合成同步完成，无需额外偶联步骤；</p><p>高免疫原性：多个肽臂呈递给免疫系统，产生强免疫刺激（多价效应）；</p><p>分子量可控：通过调整树枝状核心的代数控制MAP分子量；</p><p>产物相对均一：与载体偶联物相比，MAP的组成更加明确。</p><h3 id=4-4-map>4.4 MAP的局限与解决策略</h3><p>合成难度：8-mer MAP需要同时合成8条肽链，对偶联效率要求极高；</p><p>解决：可以使用&quot;部分肽段+连接子&quot;策略，先合成较短的肽段，再通过片段缩合连接到MAP核心；</p><p>溶解性：高分子量MAP可能溶解性差；</p><p>纯化困难：MAP产物用常规RP-HPLC纯化可能效果不佳；</p><p>空间位阻：分支过多可能导致核心附近的肽链不完全合成。</p><h2 id=5>5. 实用考虑与优化策略</h2><h3 id=5-1>5.1 偶联效率检测</h3><p>偶联完成后，需要评估偶联效率（conjugation efficiency）：</p><p>Trp荧光法：如果肽中含有Trp残基，偶联后载体蛋白的Trp荧光光谱会发生变化（波长位移或强度变化），可用于定量评估偶联程度；</p><p>SDS-PAGE：偶联后载体蛋白的表观分子量增大，在SDS-PAGE上出现带位移（band shift）；</p><p>MALDI-TOF MS：直接测定偶联前后的分子量变化，计算连接的肽分子数；</p><p>氨基酸分析（AAA）：酸水解后分析氨基酸组成变化；</p><p>Ellman试验：定量检测游离巯基的消失程度，间接评估偶联效率。</p><h3 id=5-2>5.2 肽/载体比例优化</h3><p>肽与载体的摩尔比（peptide-to-carrier ratio）对免疫效果至关重要：</p><table><tr><th>比例</th><th>效果</th><th>适用场景</th></tr><tr><td>低（~5:1）</td><td>免疫刺激弱</td><td>载体免疫耐受实验</td></tr><tr><td>中（~10-20:1）</td><td>最佳范围</td><td>常规免疫</td></tr><tr><td>高（&gt;30:1）</td><td>可能抑制免疫反应</td><td>特殊需求</td></tr></table><p>一般推荐的肽/载体摩尔比为10-20:1。过高的比例可能导致&quot;免疫沉默&quot;（immunological silencing）或载体表位掩蔽。</p><h3 id=5-3>5.3 免疫方案建议</h3><p>初次免疫（primary immunization）：使用弗氏完全佐剂（Complete Freund&#x27;s Adjuvant, CFA）乳化偶联物；</p><p>加强免疫（booster immunization）：间隔2-3周，使用弗氏不完全佐剂（Incomplete Freund&#x27;s Adjuvant, IFA）；</p><p>免疫途径：皮下（subcutaneous）或腹腔（intraperitoneal）注射；</p><p>免疫次数：通常需要3-4次免疫才能获得高滴度抗体；</p><p>采血检测：每次免疫后7-10天采血，用ELISA检测血清抗体滴度。</p><h3 id=5-4>5.4 肽序列设计建议</h3><p>在肽序列中添加Cys残基（通常在N端或C端），用于与交联剂巯基反应；</p><p>Cys应添加在远离预期表位的位置，避免干扰抗体识别；</p><p>如果目标蛋白已有天然Cys且位于关键区域，需要考虑是否使用替代交联策略；</p><p>肽长度一般8-15个残基足以模拟B细胞表位（B-cell epitope）；</p><p>如需T细胞辅助，可选择已知T细胞表位肽段共同偶联。</p><h3 id=s>本章要点总结</h3><table><tr><th>▸ 小肽免疫原性弱，需偶联到载体蛋白（KLH、BSA、TT、DT等）上才能引起有效免疫反应。
+▸ 不推荐使用同型双功能交联剂（如戊二醛）：无法控制连接方向，导致自身交联和产物不均一。
+▸ 异型双功能交联剂是首选：SPDP（二硫键）、MBS（硫醚键）、溴乙酰化法等。
+▸ MBS法形成稳定硫醚键，适合体内实验；SPDP法形成可裂解二硫键，可通过343nm监测。
+▸ 所有异型双功能方法通常需要在肽序列中引入Cys残基作为连接位点。
+▸ MAP策略无需载体蛋白：用Lys树枝状核心直接在SPPS中构建多价肽。
+▸ 偶联效率检测：Trp荧光、SDS-PAGE、MALDI-TOF MS、Ellman试验。
+▸ 推荐肽/载体摩尔比10-20:1，过高可能导致免疫沉默。</th></tr></table></div><div class="pn"><a href="ch09.html"><b>← 上一章</b><span>1. 引言：从逐步合成到汇聚式策略</span></a><a class="next" href="ch11.html"><b>下一章 →</b><span>第十一章
+Chemoselective and Orthogonal Ligation Techniques
+化学选择性与正交连接技术</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

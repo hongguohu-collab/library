@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>1. 引言：从逐步合成到汇聚式策略 · Fmoc 固相多肽合成：实用指南</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../fmoc.html">Fmoc 固相多肽合成：实用指南</a> › <b>第9章（原书Ch9）</b></div><h2 class="pt">1. 引言：从逐步合成到汇聚式策略</h2><div class="meta">图示 5 张 · 笔记约 1579 KB · 来源《Fmoc Solid Phase Peptide Synthesis: A Practical Approach》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#1">1. 引言：从逐步合成到汇聚式策略</a><a href="#2-2-2-ctc">2. 2-氯三苯基氯（2-CTC）树脂：汇聚式合成的基石</a><a href="#3">3. 保护肽片段的制备</a><a href="#4-fragment-condensation">4. 片段缩合（Fragment Condensation）策略</a><a href="#5-protaflamin-prota">5. 应用实例：Protaflamin (ProTa) 片段合成</a><a href="#6-side-chain-anchoring">6. 侧链锚定策略（Side-Chain Anchoring）</a></div><p><strong>第九章</strong><strong>  </strong><strong>汇聚式肽合成</strong></p><p><em>Convergent Peptide Synthesis</em></p><p>作者：Kleomenis Barlos &amp; Dimitrios Gatos</p><p>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p><h2 id=1>1. 引言：从逐步合成到汇聚式策略</h2><h3 id=1-1>1.1 逐步合成的局限性</h3><p>在固相多肽合成（SPPS）中，传统的逐步合成（step-wise synthesis）策略是从C端逐个残基向N端延伸。这种方法对于中短链肽（通常≤30个氨基酸残基）非常有效，但当肽链长度超过约50个残基时，会遇到越来越严重的问题：</p><p>累积偶联不完全：每步偶联反应即便达到99.5%的收率，50步之后总收率仅约78%。实际操作中每步收率往往低于99%，导致产物纯度急剧下降。</p><p>截断序列（truncated sequences）和缺失序列（deletion sequences）积累：未反应的氨基在后续步骤中可能继续参与反应，产生难以分离的杂质。</p><p>树脂上的分子间聚集（aggregation）：长肽链在树脂上容易形成二级结构（如β-sheet），导致氨基被埋藏，偶联效率下降。</p><p>溶剂化和试剂扩散受限：树脂内部空间位阻增大，反应试剂难以到达所有反应位点。</p><p>因此，对于长肽（&gt;50个残基）和蛋白质的化学合成，逐步合成策略往往无法提供足够纯度的产物。这促使研究者发展了汇聚式合成（convergent synthesis）策略。</p><figure><img loading="lazy" src="../../media/fmoc/ch09/ch09_01.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 1. </em><em>汇聚式</em><em>SPPS</em><em>中</em><em>C→N</em><em>方向的链延伸策略示意图</em></p><h3 id=1-2>1.2 汇聚式合成的基本概念</h3><p>汇聚式合成的核心思想是：将目标肽链分为若干个较短的片段（protected peptide fragments），分别合成并纯化这些片段，然后再通过片段缩合（fragment condensation）将它们连接成完整的目标肽。这种策略类似于&quot;积木搭建&quot;。</p><p>汇聚式合成与逐步合成的比较：</p><table><tr><th>特征</th><th>逐步合成（Step-wise）</th><th>汇聚式合成（Convergent）</th></tr><tr><td>适用肽长度</td><td>≤ 30-40 残基</td><td>50-100+ 残基</td></tr><tr><td>杂质累积</td><td>线性累积，越长越严重</td><td>片段独立纯化，杂质不带入</td></tr><tr><td>纯化策略</td><td>最终产物一次性纯化</td><td>片段分别纯化 + 最终纯化</td></tr><tr><td>关键瓶颈</td><td>偶联效率、聚集效应</td><td>片段缩合效率、消旋化控制</td></tr></table><h2 id=2-2-2-ctc>2. 2-氯三苯基氯（2-CTC）树脂：汇聚式合成的基石</h2><h3 id=2-1>2.1 结构与特性</h3><p>2-氯三苯基氯树脂（2-chlorotrityl chloride resin，简称2-CTC树脂）是实现汇聚式肽合成的关键工具。其核心结构是在聚苯乙烯-二乙烯苯（PS-DVB）骨架上连接了2-氯三苯甲基功能基团。</p><p>2-CTC树脂的关键特性：</p><p>极温和的切割条件：仅需1% TFA的DCM溶液即可将肽链从树脂上切割下来，与Wang树脂等需要50-95% TFA形成鲜明对比。</p><p>完整保留侧链保护基：所有酸敏感的侧链保护基（Boc、tBu、Trt、Pbf等）在1% TFA下均不受影响——这是获得保护肽片段的前提。</p><p>低消旋化上载：第一个氨基酸通过羧基与三苯甲基形成酸不稳定酯键，无需强力活化，几乎不消旋。</p><p>可逆性：酯键在弱酸下可逆，但在中性/碱性条件下足够稳定，可承受完整SPPS循环。</p><h3 id=2-2>2.2 上载条件与注意事项</h3><p>上载（loading）通常将Fmoc-氨基酸溶于DCM/DMF中，加DIEA作碱，室温反应1-2h。反应后用MeOH封端未反应的氯。上载量通常控制在0.3-0.8 mmol/g。</p><p>上载不需要预活化（pre-activation），氨基酸直接与树脂上的氯反应形成酯键；</p><p>对于C端Cys、His、Pro，消旋化风险较高，需特别控制；</p><p>上载后必须用MeOH封端（capping），否则会产生截断序列杂质。</p><h2 id=3>3. 保护肽片段的制备</h2><h3 id=3-1>3.1 制备流程</h3><p>保护肽片段（protected peptide fragment）的制备是汇聚式合成的核心步骤。流程如下：</p><table><tr><th>步骤</th><th>操作说明</th></tr><tr><td>1. 树脂上载</td><td>将C端第一个氨基酸加载到2-CTC树脂上</td></tr><tr><td>2. SPPS延伸</td><td>按照标准Fmoc-SPPS流程逐个延伸氨基酸残基</td></tr><tr><td>3. 最终脱保护</td><td>用20% piperidine/DMF脱除N端Fmoc</td></tr><tr><td>4. 温和切割</td><td>用1% TFA/DCM切割，保留所有侧链保护基</td></tr><tr><td>5. 纯化</td><td>通过沉淀、HPLC或凝胶过滤纯化</td></tr></table><h3 id=3-2>3.2 保护肽片段的特性</h3><h4 id=3-2-1>3.2.1 溶解性</h4><p>保护肽片段因含大量疏水保护基（tBu、Pbf、Trt等），水溶性极差，但可溶于DMF、NMP、DMSO等有机溶剂。疏水特性使保护肽可以从DCM/乙醚中沉淀纯化。</p><h4 id=3-2-2>3.2.2 纯化方法</h4><p>乙醚沉淀：切割液浓缩后滴入冰冷乙醚，保护肽沉淀析出；</p><p>硅胶柱层析：适合较短片段（&lt;15残基）；</p><p>制备型RP-HPLC：使用C4或C8柱（保护肽太疏水，C18保留过强）；</p><p>凝胶过滤（gel filtration）：适合较大片段。</p><h4 id=3-2-3>3.2.3 纯度鉴定</h4><p>质谱（MS）确认分子量；</p><p>分析型HPLC评估纯度；</p><p>氨基酸分析（AAA）确认组成。</p><h2 id=4-fragment-condensation>4. 片段缩合（Fragment Condensation）策略</h2><h3 id=4-1>4.1 固相片段缩合</h3><p>固相片段缩合是最常用的汇聚式策略：将C端片段锚定在树脂上（受体片段），与游离的N端保护肽片段（供体片段）偶联。</p><p>  Step 1. 将C端片段通过2-CTC树脂固定；</p><p>  Step 2. 脱除C端片段N端Fmoc；</p><p>  Step 3. 将N端保护肽片段C端羧基用缩合剂活化；</p><p>  Step 4. 活化的N端片段与树脂上C端片段游离氨基偶联；</p><p>  Step 5. 溶剂洗涤去除未反应片段和副产物；</p><p>  Step 6. 重复以上步骤连接更多片段。</p><h3 id=4-2>4.2 溶液相片段缩合</h3><p>溶液相片段缩合在脱离树脂的条件下进行。缺点是反应后需从过量试剂和未反应原料中分离产物，保护肽纯化困难，因此实际应用较少。</p><h3 id=4-3-racemization>4.3 消旋化（Racemization）风险与控制</h3><p>片段缩合中最严重的问题之一是消旋化。片段C端氨基酸在活化时，α-质子可被碱夺取形成烯醇中间体，发生构型翻转。</p><h4 id=4-3-1>4.3.1 减少消旋化的策略</h4><table><tr><th>策略</th><th>说明</th></tr><tr><td>Gly/Pro连接位点</td><td>Gly无手性中心不可能消旋；Pro α-质子受环约束消旋低</td></tr><tr><td>HOAt类添加剂</td><td>HOAt比HOBt更能有效抑制消旋化</td></tr><tr><td>HATU等试剂</td><td>HATU活化效率高且消旋化低，是片段缩合首选</td></tr><tr><td>降低反应温度</td><td>低温（0°C→室温梯度）减少消旋化</td></tr></table><p>关键原则：设计汇聚式合成路线时，应优先选择Gly或Pro作为连接位点（junction site）。如无法避免，需用最强消旋化抑制条件，并通过手性HPLC或Marfey&#x27;s试剂确认构型纯度。</p><h2 id=5-protaflamin-prota>5. 应用实例：Protaflamin (ProTa) 片段合成</h2><p>本章以protaflamin（ProTa）为例展示汇聚式合成。ProTa是具生物活性的肽，作者将其分为多个片段分别合成后组装。</p><figure><img loading="lazy" src="../../media/fmoc/ch09/ch09_02.png" alt="图示"></figure><p><em>Figure 2. Fmoc-ProTa</em><em>片段和树脂结合</em><em>ProTa</em><em>片段的结构示意图</em></p><h3 id=5-1>5.1 合成策略设计</h3><p>将ProTa序列合理分割，分割位点选在Gly或Pro残基处；</p><p>每个片段单独在2-CTC树脂上通过Fmoc-SPPS合成；</p><p>用1% TFA/DCM温和切割获得保护肽片段；</p><p>纯化后依次进行片段缩合。</p><figure><img loading="lazy" src="../../media/fmoc/ch09/ch09_03.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 3. </em><em>肽合成各阶段的变化</em><em>——</em><em>从逐步延伸到片段组装</em></p><h3 id=5-2>5.2 合成中的关键问题</h3><p>片段溶解性：保护肽在DMF中溶解度有限，需优化溶剂体系（DMF/NMP/DMSO混合）；</p><p>偶联监控：片段缩合位阻大，需Kaiser茚三酮试验或溴酚蓝试验监控；</p><p>双重偶联（double coupling）：困难位点可进行两次偶联提高收率；</p><p>片段过量：通常1.5-3倍过量N端片段推动反应完全。</p><h2 id=6-side-chain-anchoring>6. 侧链锚定策略（Side-Chain Anchoring）</h2><h3 id=6-1>6.1 原理</h3><p>侧链锚定是汇聚式合成的巧妙变体：利用氨基酸侧链功能基团（Asp/Glu的羧基、Lys的ε-氨基、Ser/Thr/Tyr的羟基等）将肽锚定到三苯基树脂上，实现肽链双向延伸（bidirectional elongation）。</p><figure><img loading="lazy" src="../../media/fmoc/ch09/ch09_04.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 4. </em><em>通过侧链功能基团将保护肽锚定到三苯基树脂上的策略</em></p><h3 id=6-2>6.2 三苯基树脂选择</h3><p>2-CTC树脂：最常用，适合通过羧基锚定（Asp/Glu侧链）；</p><p>三苯基树脂（trityl chloride resin）：酸敏感性更高，适合羟基或巯基锚定（Ser/Thr/Tyr/Cys）；</p><p>4-甲基三苯基树脂：酸稳定性适中。</p><h3 id=6-3>6.3 双向延伸策略</h3><p>C→N方向：与常规SPPS相同，Fmoc化学逐个延伸；</p><p>N→C方向：使用特殊策略向C端延伸——反复Boc脱保护和C端活化偶联；</p><p>特别适合含中间区域特殊修饰（磷酸化、糖基化）的肽链合成。</p><figure><img loading="lazy" src="../../media/fmoc/ch09/ch09_05.png" alt="图示"></figure><p><em>Figure 5. </em><em>肽链双向延伸（</em><em>bidirectional elongation</em><em>）策略示意图</em></p><h3 id=6-4>6.4 优势与局限</h3><table><tr><th>方面</th><th>优势</th><th>局限</th></tr><tr><td>灵活性</td><td>从肽链中间向两端延伸</td><td>需选择合适侧链锚定位点</td></tr><tr><td>适用范围</td><td>中间含特殊修饰的肽</td><td>并非所有残基都适合锚定</td></tr><tr><td>切割</td><td>温和条件释放产物</td><td>侧链保护基策略需重新设计</td></tr></table><h3 id=s>本章要点总结</h3><table><tr><th>▸ 逐步合成在&gt;50残基时纯度急剧下降，汇聚式策略通过&quot;分而治之&quot;解决这一瓶颈。
+▸ 2-CTC树脂是汇聚式合成的核心工具：1% TFA即可切割，保留全部侧链保护基。
+▸ 保护肽片段通过2-CTC树脂合成→温和切割→乙醚沉淀/HPLC纯化获得。
+▸ 片段缩合首选固相策略：C端片段锚定在树脂上，与N端片段偶联。
+▸ 消旋化是片段缩合最大风险：优选Gly/Pro作连接位点，用HATU/HOAt抑制。
+▸ 侧链锚定策略通过侧链功能基固定到三苯基树脂，实现双向延伸。
+▸ 汇聚式合成已被成功应用于多种生物活性肽和蛋白质的化学合成。</th></tr></table></div><div class="pn"><a href="ch08.html"><b>← 上一章</b><span>第八章  糖肽合成</span></a><a class="next" href="ch10.html"><b>下一章 →</b><span>1. 引言：为什么需要肽-载体偶联物</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

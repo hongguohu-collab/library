@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 8: Side Reactions on Hydroxyl and Carboxyl Groups in Peptide Synthesis · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第8章（原书Ch8）</b></div><h2 class="pt">Chapter 8: Side Reactions on Hydroxyl and Carboxyl Groups in Peptide Synthesis</h2><div class="meta">图示 12 张 · 笔记约 639 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><p style="text-align:center;font-weight:700">Chapter 8: Side Reactions on Hydroxyl and Carboxyl Groups in Peptide Synthesis</p><p>羟基和羧基在多肽合成中的副反应</p><h2 id=s>概述</h2><p>本章讨论多肽合成中与羟基和羧基相关的副反应。羧基是肽键构建的基础，但在合成过程中可能参与酰亚胺形成、酯交换、不必要的酯化等副反应。羟基由于显著的亲核性，可介导酰基迁移并导致肽链断裂。</p><h2 id=8-1-asp-glu>8.1 Asp/Glu侧链和肽骨架羧酸的副反应</h2><h3 id=8-1-1-asp-glu-obzl>8.1.1 碱催化Asp/Glu(OBzl)酯交换副反应</h3><p>Asp/Glu在多肽合成中最有害的副反应是天冬氨酰亚胺/戊二酰亚胺的形成。此外，Asp/Glu侧链保护酯还容易发生酯交换副反应。</p><p>在Boc策略中，通过碱催化取代反应将氨基酸固定在氯甲基树脂（Merrifield树脂）上。催化剂包括Cs盐、三乙胺（TEA）或四甲基氢氧化铵（TMAH）。实验表明TMAH的催化效果优于常规Cs盐。然而，当使用Boc-Asp(OBzl)/Glu(OBzl)-OH进行树脂上样时，TMAH会同时催化侧链苄酯的酯交换反应。</p><p>如图8.1所示，在甲醇溶剂中，侧链苄酯被转化为甲酯（Asp(OMe)/Glu(OMe)），产生+14 amu的杂质。这是因为甲酯在HF介导的侧链全脱保护步骤中不能再生游离Asp/Glu。常规Cs盐催化剂引起的酯交换程度较TMAH小。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_01.png" alt="图示"></figure><p>Figure 8.1 Boc-Asp(OBzl)/Glu(OBzl)-OH上样Merrifield树脂时的酯交换副反应</p><p>有趣的是，上述酯交换过程可以被有意利用：用TMAH/叔丁醇在高温（70°C）处理肽基Merrifield树脂，不仅将Asp(OBzl)/Glu(OBzl)转化为OtBu保护形式，还同时将肽C端转化为叔丁酯，并使肽链从固相载体上释放（图8.2）。这一锅法策略对于液相片段缩合尤其有价值。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_02.png" alt="图示"></figure><p>Figure 8.2 TMAH/叔丁醇介导的肽从Merrifield树脂上酯交换裂解</p><h3 id=8-1-2-asp-glu>8.1.2 肽树脂裂解和产品纯化过程中Asp/Glu的酯化副反应</h3><p>甲醇和乙腈是RP-HPLC纯化多肽时常用的有机洗脱剂。甲醇因成本优势在工业领域仍被使用，但其局限性是Asp/Glu侧链羧酸可能发生甲酯化。在酸性条件下浓缩HPLC馏分时，酯化反应被加剧，产生+14 amu的甲酯杂质。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_03.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.3 Asp/Glu侧链羧酸的甲酯化</p><p>为减少甲酯化副反应，需要严格控制浓缩过程的参数（温度、真空度、浓缩比例）。对于极易发生甲酯化的肽，应使用乙腈替代甲醇。类似地，树脂用甲醇洗涤后残留的甲醇未充分去除也可能导致甲酯化副反应。</p><h2 id=8-2-ser-thr>8.2 Ser/Thr侧链羟基的副反应</h2><h3 id=8-2-1-ser-thr>8.2.1 Ser/Thr侧链羟基的烷基化副反应</h3><p>Ser/Thr由于beta-羟基的亲核性，容易受到多种副反应的影响。Thr的二级beta-羟基亲核性较弱，因此Thr的副反应程度通常低于Ser。</p><p>Alloc保护基因其与其他氨基酸保护基的正交性而被广泛应用。在Pd(0)催化的Alloc脱保护过程中，可能发生O-烯丙基化副反应（图8.4）。生成的Ser(All)副产物对Pd(0)催化剂稳定，无法通过延长Pd(0)处理来再生游离羟基。不过在有效烯丙基清除剂存在下，不会导致严重的副反应。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_04.png" alt="图示"></figure><p>Figure 8.4 Pd(0)催化Alloc脱保护时Ser的O-烯丙基化副反应</p><h3 id=8-2-2-ser-thr>8.2.2 Ser/Thr侧链羟基的酰化副反应</h3><h4 id=8-2-2-1>8.2.2.1 氨基酸偶联过程中的酰化</h4><p>在&quot;最小保护&quot;策略中，侧链未保护的Ser/Thr可直接参与肽组装。然而，当酰化试剂大量过量，或反应迟缓时，未保护羟基的酰化副反应不能完全排除。Ser/Thr侧链酰化还可能引发后续修饰：酰基O→N迁移（导致肽链终止或重复偶联），以及beta-消除（生成delta-Ala杂质）。</p><h4 id=8-2-2-2>8.2.2.2 酸性条件下的酰化</h4><p>Ser/Thr可分别在甲酸、乙酸和TFA中转化为相应的甲酸酯、乙酸酯和三氟乙酸酯。</p><h4 id=8-2-2-3-n-o>8.2.2.3 酸催化的酰基N→O迁移</h4><p>含有N端酰基-Ser/Thr结构（如Ac-Ser/Thr、For-Ser/Thr、Palm-Ser/Thr）的肽在侧链全酸解脱保护步骤中可能发生N→O酰基迁移。这些杂质在碱处理下可进一步发生beta-消除转化为delta-Ala衍生物。建议用弱碱处理使酰基迁移逆向回到Na-酰基方向。</p><h3 id=8-2-3-ser-thr-beta>8.2.3 Ser/Thr的beta-消除副反应</h3><p>含有beta-羟基的氨基酸在碱性条件下易发生beta-消除。当侧链羟基连接吸电子基团时，beta-消除倾向显著增强。多种Ser/Thr衍生物如Ser/Thr(Tos)、Ser/Thr(Mesyl)、Ser(SO2Bzl)、Ser(Boc)等可发生碱催化beta-消除。碱浓度、温度、反应时间和肽序列都会影响beta-消除倾向。Thr的beta-消除敏感性远低于Ser。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_05.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.5 Ser/Thr衍生物的beta-消除</p><p>碳二亚胺类偶联试剂也可引发Ser/Thr的beta-消除（CuCl可催化该过程，图8.7）。CDI也能通过活化羟基引发beta-消除（图8.6）。这些活化过程实际上有时被有意利用来制备delta-Ala/delta-Abu衍生物。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_06.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.6 CDI诱导的Ser/Thr beta-消除</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_07.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.7 碳二亚胺诱导的Ser/Thr beta-消除</p><h3 id=8-2-4-n-ser-thr>8.2.4 N端Ser/Thr诱导的噁唑烷烷酯形成</h3><p>N端侧链未保护的Ser/Thr，当肽的Na-氨基为氨基甲酸酯型保护时，在碱性条件下beta-羟基可亲核攻击骨架氨基甲酸酯，生成噁唑烷烷酯副产物（图8.8）。建议在碱处理前保护N端Ser/Thr的beta-羟基，或使用更温和的水解条件。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_08.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.8 Na-Moz-Ser/Thr肽的噁唑烷烷酯形成机制</p><p>序列内部的未保护Ser/Thr也可能通过beta-羟基亲核攻击引发类似副反应（图8.9），可生成异构肽酯或噁唑烷烷啉/噁唑烷烷咽衍生物。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_09.png" alt="图示"></figure><p>Figure 8.9 -Ser/Thr-肽转化为异构肽酯或噁唑烷烷啉/噁唑烷烷咽的机制</p><h3 id=8-2-5-ser-thr>8.2.5 Ser/Thr诱导的逆醛醇裂解</h3><p>侧链未保护的Ser/Thr含有beta-羟基羧基结构，理论上可能发生逆醛醇裂解。如图8.12所示，Ser/Thr在碱处理下可发生C-alpha-C-beta键断裂，降解为甲醛/乙醛和肽烯醇盐碎片，后者重排为甘氨酸衍生物。</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_10.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.10 侧链未保护Ser/Thr中的beta-羟基羧基结构</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_11.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.11 碱催化醛醇缩合机制</p><figure><img loading="lazy" src="../../media/side/ch08/ch08_12.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">Figure 8.12 Ser/Thr肽的碱催化逆醛醇裂解</p><h2 id=s-x>本章总结</h2><p>1. Asp/Glu侧链羧酸副反应：碱催化酯交换（TMAH &gt; Cs盐）和酸性条件下的甲酯化（HPLC甲醇洗脱剂和树脂洗涤残留甲醇）。</p><p>2. Ser/Thr侧链羟基副反应：烷基化、酰化、酰基N→O迁移、beta-消除、噁唑烷烷酯形成以及逆醛醇裂解。</p><p>3. 关键防范策略：选择合适的催化剂（Cs盐优于TMAH）、用乙腈替代甲醇洗脱、避免甲醇洗涤树脂、保护Ser/Thr的beta-羟基、使用温和条件、评估酰基迁移风险。</p></div><div class="pn"><a href="ch07.html"><b>← 上一章</b><span>Chapter 7: Side Reactions on Amino Groups in Peptide Synthesis</span></a><a class="next" href="ch09.html"><b>下一章 →</b><span>Chapter 9: Peptide Oxidation/Reduction Side Reactions</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

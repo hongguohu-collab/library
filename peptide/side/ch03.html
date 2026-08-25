@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 3: Peptide Global Deprotection/Scavenger-Induced Side Reactions · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第3章（原书Ch3）</b></div><h2 class="pt">Chapter 3: Peptide Global Deprotection/Scavenger-Induced Side Reactions</h2><div class="meta">图示 6 张 · 笔记约 1175 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#s">引言</a><a href="#3-1-trp">3.1 Trp在肽全局脱保护过程中的叔丁基化副反应</a><a href="#3-2-trp">3.2 树脂连接基阳离子在肽裂解/全局脱保护过程中对Trp的烷基化</a><a href="#3-3-trp-edt-trp-edt-tfa">3.3 Trp-EDT和Trp-EDT-TFA加合物在肽全局脱保护过程中的形成</a><a href="#3-4-trp">3.4 Trp在肽全局脱保护过程中的二聚化副反应</a><a href="#3-5-trp">3.5 Trp在肽全局脱保护过程中的还原副反应</a><a href="#3-6-cys">3.6 Cys在肽全局脱保护过程中的烷基化副反应</a><a href="#3-7-cys-edt">3.7 Cys-EDT加合物在肽全局脱保护反应中的形成</a><a href="#3-8">3.8 肽侧链全局脱保护反应中的磺化副反应</a><a href="#3-9-cys-acm-acm-acm-s-o">3.9 Cys(Acm)的Acm过早裂解和Acm S→O迁移</a><a href="#3-10-dodt-met">3.10 使用DODT作为清除剂时的Met烷基化</a><a href="#s-x">关键要点总结</a><a href="#s-x-x">学习总结</a></div><p style="text-align:center;font-weight:700">Chapter 3: Peptide Global Deprotection/Scavenger-Induced Side Reactions</p><p><strong>多肽全局脱保护/清除剂诱导的副反应</strong></p><p>学习日期：2026-03-25</p><p>教材：Side Reactions in Peptide Synthesis (Yang, Yi, 2015)</p><h2 id=s>引言</h2><p>多肽固相合成（SPPS）的成功不仅取决于目标肽链的组装，还取决于肽链从固相载体上的裂解和侧链保护基的全局脱保护。在这一过程中，HF和TFA分别用于Boc和Fmoc化学中的肽链裂解和全局脱保护。
+
+裂解下来的保护基在反应系统中以碳正离子、磺酰基阳离子或其他衍生物的形式存在，在未被清除剂淬灭之前，这些反应性亲电物种可能与肽侧链上释放的亲核官能团发生反应，例如：
+- Met上的硫醚基团
+- Tyr上的酚基团
+- Trp上的吲哚基团
+- Ser/Thr上的羟基
+- Cys上的巯基
+- Arg上的胍基
+
+这些反应可能以可逆或不可逆的方式进行，产生各种加成副产物。</p><h2 id=3-1-trp>3.1 Trp在肽全局脱保护过程中的叔丁基化副反应</h2><h3 id=3-1-1-trp>3.1.1 Trp的脆弱性</h3><p>Trp侧链的吲哚基团在肽全局脱保护过程中容易受到多种副反应的影响：
+- 叔丁基化（tert-butylation）
+- 树脂间隔基阳离子的烷基化
+- Mtr、Pmc或Pbf离子的磺化
+- 氧化
+- 二聚化
+
+Trp吲哚侧链在酸性条件下极易受到亲电攻击，修饰主要发生在2位。</p><p>【Figure 3.1 Trp吲哚侧链在酸/碱条件下的亲电攻击】</p><figure><img loading="lazy" src="../../media/side/ch03/ch03_01.png" alt="图示"></figure><h3 id=3-1-2>3.1.2 叔丁基化机理</h3><p>在Fmoc模式肽合成中，一些活性氨基酸（如Ser、Thr、Tyr、Asp、Glu）的侧链以叔丁基醚或叔丁基酯的形式保护。TFA处理含有这些残基的保护肽前体时，会生成叔丁基阳离子。
+
+叔丁基阳离子来源：
+1. 侧链保护基的裂解（tBu醚/酯）
+2. Boc保护基的分解
+
+分子量增加：+56 amu</p><p>【Figure 3.2 Boc酸解过程的可能机理】</p><figure><img loading="lazy" src="../../media/side/ch03/ch03_02.png" alt="图示"></figure><p>【Figure 3.3 叔丁基阳离子和叔丁基三氟乙酸酯诱导的Trp侧链烷基化副反应】</p><figure><img loading="lazy" src="../../media/side/ch03/ch03_03.png" alt="图示"></figure><h3 id=3-1-3>3.1.3 预防策略</h3><p>1. **Trp侧链保护**
+   - 在Trp Nin引入Boc保护基
+   - Nin-Boc保护的Trp衍生物能明显避免叔丁基化和磺化副反应
+
+2. **清除剂的使用**
+   - Reagent K（82.5% TFA/5% phenol/5% H2O/5% thioanisole/2.5% EDT）
+   - EDT在清除叔丁基阳离子方面最有效
+   - 水是良好的淬灭试剂</p><h2 id=3-2-trp>3.2 树脂连接基阳离子在肽裂解/全局脱保护过程中对Trp的烷基化</h2><p>**原因：**
+除了叔丁基化副反应外，Trp残基还可能受到降解的连接基阳离子介导的Trp烷基化影响。
+
+主要原因：固相载体上连接基的酸诱导酸解断裂。连接基片段以各种阳离子的形式释放到溶液相中，这些阳离子可以通过亲电加成攻击Trp上的吲哚环。
+
+**受影响的树脂类型：**
+1. Wang树脂和HMPA树脂
+   - 正常裂解：Site A（肽C末端与连接基之间）
+   - 异常裂解：Site B（烷基苯基醚键）
+   - 产生：4-羟基苄基阳离子
+
+2. Rink树脂、Rink amide MBHA树脂、PAL树脂
+   - 可能发生间隔基与固体载体骨架之间的意外酸解裂解
+   - 产生各种阳离子（+106 amu, +163 amu, +202 amu, +265 amu）</p><p>【Figure 3.5 Wang和HMPA-AM肽基树脂的酸解】</p><figure><img loading="lazy" src="../../media/side/ch03/ch03_04.png" alt="图示"></figure><p>【Figure 3.6 PAL、Rink和Rink MBHA肽基树脂的TFA酸解】</p><figure><img loading="lazy" src="../../media/side/ch03/ch03_05.png" alt="图示"></figure><p>【Figure 3.7 SPPS树脂裂解的连接基阳离子对Trp的苄基化副反应】</p><figure><img loading="lazy" src="../../media/side/ch03/ch03_06.png" alt="图示"></figure><p>**预防策略：**
+1. **分步裂解/全局脱保护策略** - 用稀释的TFA溶液处理，避免高浓度TFA
+2. **使用酸稳定的树脂间隔基** - 新一代Wang树脂，PAL或Rink连接到aminomethyl基团
+3. **优化TFA浓度和处理时间**
+4. **使用适当的清除剂** - Reagent R（anisole/thioanisole/EDT）、1,3-dimethoxybenzene（DMB）</p><h2 id=3-3-trp-edt-trp-edt-tfa>3.3 Trp-EDT和Trp-EDT-TFA加合物在肽全局脱保护过程中的形成</h2><p>**现象：**
+一些脆弱的Trp残基在TFA介导的肽侧链全局脱保护步骤还受到TFA/EDT介导的修饰影响，转化为环状二硫缩醛加合物。
+
+分子量增加：+172 amu
+修饰位置：吲哚环的2位
+
+**发现：**
+- 在肽侧链全局脱保护反应中首次检测到（15 equiv. EDT, TFA/H2O 95:5, 50°C）
+- 目的是定量裂解Arg侧链上的Mtr保护基
+- 通过NMR确认为Trp衍生物在吲哚侧链2位被TFA/EDT修饰（五元环二硫缩醛形式）
+
+**预防策略：**
+1. 使用新型Arg保护基 - MIS（1,2-dimethylindole-3-sulfonyl）
+2. 用DTT或其他硫醇衍生物代替EDT
+3. 合理缩短全局脱保护时间
+4. Trp Nin-Boc保护</p><h2 id=3-4-trp>3.4 Trp在肽全局脱保护过程中的二聚化副反应</h2><p>**现象：**
+Trp二聚化行为对受影响蛋白质的生理性质产生极其重要的影响。肽通过Trp二聚化主要发生在TFA或HF介导的肽侧链全局脱保护步骤，由强酸的存在催化。
+
+**机理：**
+- 类似于Mannich型二聚化
+- 两个Trp残基在各自吲哚环的2位连接
+- 过程通过质子化形成阳离子Trp衍生物引发
+
+**预防策略：**
+1. 合理缩短肽全局脱保护反应时间
+2. Boc保护的Trp被证实对这种副反应不太敏感</p><h2 id=3-5-trp>3.5 Trp在肽全局脱保护过程中的还原副反应</h2><p>**三烷基硅烷作为清除剂：**
+三烷基硅烷家族可在酸性条件下作为温和还原剂。
+
+**常用的三烷基硅烷化合物：**
+1. TIS（三异丙基硅烷） - 空间效应明显，反应选择性好
+2. TES（三乙基硅烷） - 价格低，但还原能力强
+
+**TES的还原副反应：**
+- TES内在具有比TIS更强的还原能力
+- 可能导致吲哚衍生物在酸性条件下还原为二氢吲哚
+- 分子量变化：Trp → Trp-indoline（+2 amu）
+
+**预防策略：**
+1. Trp吲哚侧链用Boc保护
+2. 使用TIS代替TES作为肽全局脱保护的清除剂</p><h2 id=3-6-cys>3.6 Cys在肽全局脱保护过程中的烷基化副反应</h2><p>**现象：**
+Cys侧链上的巯基官能团在肽侧链全局脱保护反应中可能遭受不可逆的烷基化副反应。
+
+**叔丁基化：**
+- 来源：Boc或tBu保护基衍生的叔丁基阳离子、叔丁基三氟乙酸酯
+- 产物：叔丁基硫醚杂质
+
+**三苯甲基化（Tritylation）：**
+- Cys也可被Trt阳离子可逆修饰
+- 在肽侧链全局脱保护过程中转化回Cys(Trt)衍生物
+
+**预防策略：**
+使用能够充分捕获阳离子的适当清除剂。
+
+**清除剂选择：**
+1. EDT：对叔丁基阳离子最有效
+2. 三烷基硅烷（TES或TIS）：可有效淬灭Trt阳离子</p><h2 id=3-7-cys-edt>3.7 Cys-EDT加合物在肽全局脱保护反应中的形成</h2><p>**现象：**
+Cys上的自由巯基侧链可通过空气介导的氧化以分子内或分子间二硫键桥的形式与另一个巯基共价连接。
+
+**Cys-EDT加合物的形成：**
+分子量增加：+92 amu
+
+**发现的共同特征：**
+1. 受影响的目标肽含有具有自由巯基侧链的Cys残基
+2. 大多数敏感Cys残基最初用Trt保护
+3. TFA通常用于最终全局脱保护处理
+4. EDT作为全局脱保护混合物的成分清除剂之一
+
+**Cys-EDT-tBu加合物：**
+分子量增加：+148 amu
+
+**预防策略：**
+1. 在肽侧链全局脱保护反应中用非硫醇清除剂代替EDT（H2O代替EDT）
+2. 使用替代硫醇衍生物（DTT、DODT或1,8-octanedithiol）
+3. 通过还原剂（如TCEP）还原杂质，实现目标Cys肽的再生</p><h2 id=3-8>3.8 肽侧链全局脱保护反应中的磺化副反应</h2><p>**背景：**
+Arg残基胍基侧链上的磺酰保护基（如Pmc、Mtr、Pbf）对TFA处理表现出相对增强的稳定性，这在定量去除磺酰保护基和Arg残基再生方面引入了挑战。
+
+**磺化副反应：**
+从Arg侧链裂解下来的磺酰基阳离子可能在肽侧链全局脱保护反应过程中对敏感底物引发不希望的修饰。
+
+**受影响的残基：**
+1. Trp、Tyr、Fmoc部分 - 转化为Pmc-加合物或磺酸衍生物
+2. Ser和Thr - 磺化氨基酸副产物Ser(SO3H)和Thr(SO3H)，+80 amu
+3. Arg本身 - Arg(SO3H)副产物，+80 amu
+
+**预防策略：**
+1. 使用Pbf保护基 - 可显著降低Trp磺化副反应
+2. 使用新型Arg保护基 - MIS（1,2-dimethylindole-3-sulfonyl）
+3. 使用Fmoc-Arg(Boc)2-OH - 完全避免磺化副反应
+4. 清除剂的重要作用 - Phenol和H2O可有效淬灭磺酰基阳离子</p><h2 id=3-9-cys-acm-acm-acm-s-o>3.9 Cys(Acm)的Acm过早裂解和Acm S→O迁移</h2><p>**Acm的稳定性：**
+在大多数情况下，Cys侧链上的Acm在酸或碱性溶液中保持稳定，可应用于Boc/Bzl和Fmoc/tBu肽化学。
+
+**过早裂解问题：**
+Thioanisole可诱导Cys(Acm)前体的Acm过早裂解，导致Acm对敏感底物（如Tyr、Ser、Thr残基）的不可逆修饰。
+
+**预防策略：**
+如果受保护肽前体中含有Cys(Acm)、Cys(StBu)或Cys(tBu)残基，建议使用不含thioanisole和硫醇清除剂的脱保护混合物。
+
+**Acm S→O迁移：**
+Acm基团从Cys(Acm)到Ser/Thr羟基取代基的迁移可在Tl(tfa)3或I2处理时发生。
+
+预防策略：加入甘油作为Acm阳离子底物，有效抑制Acm S→O迁移。
+
+**Acm S→C迁移：**
+含有-Tyr-Cys(Acm)-序列的肽可在酸处理时发生Acm迁移。
+
+预防策略：在TFA溶液中加入phenol可减少Tyr(Acm)副产物的形成。</p><h2 id=3-10-dodt-met>3.10 使用DODT作为清除剂时的Met烷基化</h2><p>**Met的独特性质：**
+Met可在宽pH谱（pH &gt; 2）内与各种亲电试剂快速反应，这使其更容易受到TFA介导的肽侧链全局脱保护过程中释放的碳正离子修饰的影响。
+
+**DODT的应用：**
+3,6-dioxa-1,8-octanedithiol作为经典EDT和DTT的新一代硫醇清除剂替代品，由于其无恶臭特性，特别受工业肽制造青睐。
+
+**DODT的副反应：**
+使用DODT作为清除剂可导致杂质形成，分子量比目标肽产物增加+117 amu。
+
+通过LC-MS-MS和NMR分析确认，修饰发生在Met残基上，副产物被鉴定为叔丁基硫乙基化锍Met盐。
+
+**教训：**
+新型清除剂虽然具有某些优势（如无恶臭），但可能引入新的副反应，需要在实际应用中进行充分测试和验证。</p><h2 id=s-x>关键要点总结</h2><p>【Trp相关副反应】
+
+1. 叔丁基化（+56 amu）
+   - 来源：tBu保护基、Boc分解
+   - 预防：Trp(Boc)保护、Reagent K、EDT清除剂
+
+2. 树脂连接基烷基化
+   - 来源：Wang、Rink、PAL等树脂的异常裂解
+   - 预防：分步裂解、酸稳定树脂、优化TFA浓度
+
+3. Trp-EDT-TFA加合物（+172 amu）
+   - 来源：EDT与TFA形成二硫缩醛阳离子
+   - 预防：用DTT代替EDT、使用MIS保护基
+
+4. Trp二聚化
+   - 机理：Mannich型二聚化
+   - 预防：缩短TFA处理时间、Boc保护
+
+5. Trp还原（+2 amu）
+   - 来源：TES作为清除剂
+   - 预防：用TIS代替TES
+
+【Cys相关副反应】
+
+1. 烷基化（叔丁基化、三苯甲基化）
+   - 预防：EDT淬灭叔丁基阳离子、TIS淬灭Trt阳离子
+
+2. Cys-EDT加合物（+92 amu）
+   - 机理：二硫键形成
+   - 预防：用DTT代替EDT、TCEP还原再生
+
+3. Cys-EDT-tBu加合物（+148 amu）
+   - 机理：Cys-EDT加合物捕获叔丁基阳离子
+   - 预防：同Cys-EDT加合物
+
+【磺化副反应】
+
+- 受影响残基：Trp、Tyr、Ser、Thr、Arg
+- 分子量增加：+80 amu的倍数
+- 来源：Arg(Pmc/Mtr/Pbf)的磺酰基阳离子
+- 预防：使用Pbf或MIS保护基、Phenol清除剂、水淬灭
+
+【Acm相关副反应】
+
+1. Acm过早裂解
+   - 诱导剂：Thioanisole、anisole
+   - 预防：避免使用含thioanisole的脱保护混合物
+
+2. Acm S→O迁移
+   - 底物：Ser、Thr、Asn、Gln
+   - 预防：加入甘油作为Acm阳离子底物
+
+3. Acm S→C迁移
+   - 序列：-Tyr-Cys(Acm)-
+   - 预防：Phenol清除剂
+
+【Met烷基化】
+
+- 清除剂：DODT
+- 分子量增加：+117 amu
+- 产物：叔丁基硫乙基化锍Met盐
+- 教训：新型清除剂需充分测试
+
+【通用预防策略】
+
+1. 保护基选择
+   - Trp：Nin-Boc
+   - Arg：Pbf、MIS、Boc2
+   - Cys：Trt
+
+2. 清除剂选择
+   - 叔丁基阳离子：EDT、H2O
+   - Trt阳离子：TIS、TES
+   - 磺酰基阳离子：Phenol、H2O
+   - 替代EDT：DTT、1,8-octanedithiol
+
+3. 条件优化
+   - 缩短脱保护时间
+   - 降低TFA浓度
+   - 避免高温
+   - 分步裂解/全局脱保护
+
+4. 树脂选择
+   - 酸稳定间隔基
+   - 超酸敏感树脂（CTC、Sieber）
+   - Aminomethyl-linked树脂</p><h2 id=s-x-x>学习总结</h2><p>Chapter 3系统阐述了肽全局脱保护过程中由清除剂和反应条件引起的各种副反应。
+
+核心要点：
+
+1. 副反应的普遍性
+几乎所有氨基酸残基在全局脱保护过程中都可能受到副反应影响，特别是具有亲核侧链的残基（Trp、Cys、Tyr、Met等）。
+
+2. 清除剂的双重作用
+清除剂既是防止副反应的关键，也可能成为引发新副反应的源头。需要根据具体序列和保护基策略精心选择。
+
+3. 保护基策略的重要性
+适当的保护基（如Trp的Boc、Arg的MIS）可显著降低副反应风险。
+
+4. 条件优化的必要性
+反应时间、温度、TFA浓度等因素对副反应程度有显著影响。
+
+5. 分步策略的优势
+在复杂情况下，采用分步裂解/全局脱保护策略可有效降低副反应风险。
+
+通过系统学习和理解这些副反应的机理和预防策略，可以在实际合成中更好地预测和避免问题，提高肽合成的成功率。</p><p>学习日期：2026-03-25</p><p>文件位置：C:\\Users\\mutian\\Desktop\\openclaw\\多肽合成副反应学习\\</p></div><div class="pn"><a href="ch02.html"><b>← 上一章</b><span>Chapter 2: β-Elimination Side Reactions（β-消除副反应）</span></a><a class="next" href="ch04.html"><b>下一章 →</b><span>Chapter 4: Peptide Rearrangement Side Reactions</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

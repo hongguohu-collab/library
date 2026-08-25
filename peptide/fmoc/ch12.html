@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>第十二章
+Purification of Large Peptides Using Chemoselective Tags
+利用化学选择性标签纯化大肽 · Fmoc 固相多肽合成：实用指南</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../fmoc.html">Fmoc 固相多肽合成：实用指南</a> › <b>第12章（原书Ch12）</b></div><h2 class="pt">第十二章
+Purification of Large Peptides Using Chemoselective Tags
+利用化学选择性标签纯化大肽</h2><div class="meta">图示 1 张 · 笔记约 621 KB · 来源《Fmoc Solid Phase Peptide Synthesis: A Practical Approach》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#1">1. 引言：大肽纯化的挑战</a><a href="#2">2. 化学选择性标签的基本原理</a><a href="#3-fmoc-fmoc-chromatographic-probe">3. Fmoc 色谱探针（Fmoc Chromatographic Probe）</a><a href="#4-biotin-affinity-probe">4. 生物素亲和探针（Biotin Affinity Probe）</a><a href="#5-capping-with-tags">5. 未反应链封端策略（Capping with Tags）</a><a href="#6-rat-cpn10">6. 应用实例：rat Cpn10 的纯化</a><a href="#7">7. 局限性与实用性评估</a></div><p style="text-align:center;font-weight:700">第十二章
+Purification of Large Peptides Using Chemoselective Tags
+利用化学选择性标签纯化大肽</p><p><em>作者：Paolo Mascagni</em></p><p><em>书页范围：pp. 265–276</em></p><h2 id=1>1. 引言：大肽纯化的挑战</h2><p>随着 SPPS 技术的发展，合成越来越长的肽链（&gt;50 个氨基酸残基）成为可能。然而，大肽（large peptides）的纯化面临严峻挑战：</p><p>粗产物成分复杂——包含目标肽、截短序列 (truncated sequences)、缺失序列 (deletion sequences)、外消旋化产物等</p><p>大肽在 RP-HPLC 中的色谱行为相近——疏水性差异小，难以分离</p><p>目标肽与截短产物的分子量和极性相似，传统反相 HPLC 分辨率不足</p><p>大肽可能聚集或吸附，降低回收率</p><p>化学选择性标签 (chemoselective tags) 策略为解决这一难题提供了创新思路：通过在合成过程中选择性标记目标肽，利用标签的独特物理化学性质辅助分离纯化，然后去除标签得到纯净目标产物。</p><h2 id=2>2. 化学选择性标签的基本原理</h2><p>化学选择性标签策略的核心是&quot;标记-分离-去标签&quot;三步法：</p><p>标记 (Tagging)：在 SPPS 最后一步（或特定步骤）引入化学标签 (tag)，该标签通过选择性化学反应仅与目标肽的特定基团（如 N端氨基）偶联。</p><p>分离 (Separation)：利用标签的独特性质（增强疏水性、亲和结合能力等），通过 RP-HPLC 或亲和色谱将带标签的目标肽与未标记杂质分离。</p><p>去标签 (Detagging)：纯化完成后，通过温和化学反应去除标签，恢复目标肽天然结构。去标签条件必须不影响肽链。</p><p><strong>关键要求：（1）标签引入反应高效且选择性好的；（2）标签显著改变色谱行为；（3）去标签条件温和，不破坏肽链；（4）流程实用且可重复。</strong></p><h2 id=3-fmoc-fmoc-chromatographic-probe>3. Fmoc 色谱探针（Fmoc Chromatographic Probe）</h2><h3 id=3-1>3.1 设计理念</h3><p>Fmoc（9-fluorenylmethyloxycarbonyl）基团具有显著疏水性（含芴环芳香结构）。Mascagni 课题组巧妙利用这一点，将 Fmoc 作为&quot;色谱探针&quot; (chromatographic probe)：</p><p>在 SPPS 合成结束时，将 Fmoc 基团引入目标肽 N端（或特定位置）</p><p>Fmoc 的强疏水性使带标签目标肽在 RP-HPLC 中保留时间显著延长</p><p>与未标记的截短产物、缺失产物有效分离</p><p>纯化后用哌啶 (piperidine) 去除 Fmoc——Fmoc-SPPS 的标准脱保护条件</p><h3 id=3-2>3.2 实验流程</h3><table><tr><th>步骤</th><th>操作</th><th>说明</th></tr><tr><td>1. SPPS 合成</td><td>按标准 Fmoc-SPPS 流程合成，最后一个 Fmoc 不去除</td><td>保留 N端 Fmoc 作为色谱标签</td></tr><tr><td>2. 切割与脱保护</td><td>TFA 切割树脂 + 去除侧链保护基</td><td>N端 Fmoc 在 TFA 中稳定</td></tr><tr><td>3. 粗产物分析</td><td>RP-HPLC 分析粗产物</td><td>目标肽(含Fmoc)与杂质(无Fmoc)疏水性差异显著</td></tr><tr><td>4. 半制备 RP-HPLC</td><td>利用 Fmoc 疏水性差异分离</td><td>带 Fmoc 目标肽保留时间更长</td></tr><tr><td>5. 去 Fmoc 标签</td><td>20% 哌啶/DMF, 15–20 min</td><td>温和条件，不影响肽链</td></tr><tr><td>6. 最终纯化</td><td>再次 RP-HPLC 纯化</td><td>去除脱保护副产物 (dibenzofulvene 等)</td></tr></table><p><strong>Fmoc 色谱探针策略的优势在于简洁性——Fmoc 既是 SPPS 标准保护基，又兼作色谱标签，无需额外非天然基团。去标签条件（哌啶）也是 SPPS 标准操作。</strong></p><h3 id=3-3>3.3 标签引入时机</h3><p>有两种引入 Fmoc 标签的策略：</p><p>策略一：保留 N端 Fmoc——SPPS 最后一个氨基酸的 Fmoc 不去除，直接 TFA 切割。Fmoc 在 TFA 中稳定。</p><p>策略二：合成后选择性引入——N端需游离氨基时，纯化后选择性引入。</p><h2 id=4-biotin-affinity-probe>4. 生物素亲和探针（Biotin Affinity Probe）</h2><h3 id=4-1>4.1 原理</h3><p>生物素 (biotin) 与链霉亲和素 (streptavidin) 之间的结合是自然界中最强的非共价相互作用之一（Kd 约 10^-15 M）。利用此特性将生物素作为亲和标签选择性&quot;捕获&quot;目标肽：</p><p>在 SPPS 中将生物素标签连接到目标肽 N端或特定位置</p><p>粗产物通过链霉亲和素亲和柱 (streptavidin-agarose column)</p><p>带生物素标签的目标肽被特异性捕获，杂质流出</p><p>洗脱（变性剂或生物素竞争洗脱）回收目标肽</p><p>去除生物素标签（需可断裂连接臂，如二硫键或光敏连接臂）</p><h3 id=4-2>4.2 可断裂连接臂设计</h3><p>由于生物素-链霉亲和素结合极强，需设计可断裂连接臂 (cleavable linker)：</p><table><tr><th>连接臂类型</th><th>断裂条件</th><th>优缺点</th></tr><tr><td>二硫键 (Disulfide)</td><td>DTT / beta-巯基乙醇还原</td><td>温和，但需避免 Cys 干扰</td></tr><tr><td>光敏连接臂 (Photocleavable)</td><td>UV 350–365 nm</td><td>干净，需特殊光源</td></tr><tr><td>酸敏连接臂 (Acid-labile)</td><td>弱酸 (如 TFA)</td><td>简单，可能与保护基冲突</td></tr><tr><td>酶切连接臂 (Enzyme-cleavable)</td><td>蛋白酶 (TEV, thrombin)</td><td>高特异性，酶可能影响肽</td></tr></table><p>生物素亲和探针优势：极高的纯化倍数——一步亲和纯化即达很高纯度。缺点：需额外连接臂设计和去标签步骤。</p><h2 id=5-capping-with-tags>5. 未反应链封端策略（Capping with Tags）</h2><h3 id=5-1>5.1 原理</h3><p>SPPS 中每步偶联不可能 100% 完成。未反应肽链 (truncated sequences) 是主要杂质。传统方法用 Ac2O 封端（乙酰化）。创新策略：用色谱活性标签封端未反应链——</p><p>每步偶联后，用色谱标签（如 Fmoc-ONs 或疏水标签）封端未反应氨基</p><p>截短产物带多个色谱标签，疏水性显著增强</p><p>RP-HPLC 中，带多标签的截短产物与目标肽色谱行为差异增大</p><p>更容易通过色谱分离去除截短产物</p><h3 id=5-2>5.2 封端试剂选择</h3><table><tr><th>封端试剂</th><th>引入标签</th><th>效果</th></tr><tr><td>Fmoc-ONs / Fmoc-OSu</td><td>Fmoc (疏水)</td><td>增加截短产物保留时间</td></tr><tr><td>芘乙酰氯 (Pyrenylacetyl)</td><td>芘基 (强荧光+疏水)</td><td>便于检测和分离</td></tr><tr><td>DNFB (2,4-二硝基氟苯)</td><td>DNP (强疏水+可见吸收)</td><td>便于检测</td></tr><tr><td>生物素-NHS</td><td>生物素 (亲和标签)</td><td>可用亲和色谱分离</td></tr></table><p>注意：封端策略增加合成成本（标签试剂较贵），但显著提高最终产物纯度，对大肽合成尤为有价值。</p><h2 id=6-rat-cpn10>6. 应用实例：rat Cpn10 的纯化</h2><h3 id=6-1>6.1 背景</h3><p>rat Cpn10（大鼠 Chaperonin 10）是一个 101 个氨基酸残基的蛋白质，验证化学选择性标签策略的经典案例。101 残基远超常规 SPPS 极限（~50–60 aa），需片段连接 (ligation) 策略合成，纯化是核心难题。</p><h3 id=6-2>6.2 合成与纯化方案</h3><p>Mascagni 课题组使用 Fmoc 色谱探针策略纯化 rat Cpn10：</p><p>将 rat Cpn10 分为多个片段进行 SPPS 合成</p><p>每个片段在合成时保留 N端 Fmoc 标签</p><p>片段经化学连接后，产物带有 Fmoc 标签</p><p>利用 Fmoc 疏水性增强 RP-HPLC 分离效果</p><p>纯化后用哌啶去除 Fmoc 标签，得到天然 rat Cpn10</p><h3 id=6-3-hplc>6.3 HPLC 分析结果</h3><figure><img loading="lazy" src="../../media/fmoc/ch12/ch12_01.png" alt="图示"></figure><p><em>Figure 1. Fmoc 探针纯化 rat Cpn10 的 HPLC 色谱图（p.270）</em></p><p>如 Figure 1 所示，HPLC 色谱图展示了 Fmoc 标签策略的效果：</p><p>带 Fmoc 标签的目标肽保留时间明显延长（与无标签杂质相比）</p><p>目标峰与杂质峰的分离度 (resolution) 显著改善</p><p>去除 Fmoc 后目标肽纯度很高——分析型 HPLC 和 MS 确认</p><p>回收率满意——对 101 残基大肽来说已是非常好的结果</p><p><strong>这一实例证明了 Fmoc 色谱探针策略在大肽纯化中的实用价值，特别是对于 &gt;50 残基的肽段，传统 HPLC 难以有效分离时。</strong></p><h2 id=7>7. 局限性与实用性评估</h2><h3 id=7-1-fmoc>7.1 Fmoc 色谱探针的局限</h3><p>标签容量有限——一个 Fmoc 对极大肽段 (&gt;100 aa) 疏水性增强可能不足</p><p>Fmoc 在长时间 TFA 处理下可能部分脱落</p><p>去除 Fmoc 后需二次纯化（去除 dibenzofulvene 等副产物）</p><h3 id=7-2>7.2 生物素亲和探针的局限</h3><p>需可断裂连接臂——增加合成复杂性</p><p>链霉亲和素柱成本较高——大规模纯化不经济</p><p>洗脱条件可能导致变性</p><h3 id=7-3>7.3 综合评估</h3><table><tr><th>策略</th><th>最佳适用范围</th><th>纯化倍数</th><th>操作复杂度</th><th>成本</th></tr><tr><td>Fmoc 色谱探针</td><td>50–120 aa</td><td>中等 (3–10x)</td><td>低</td><td>低</td></tr><tr><td>生物素亲和探针</td><td>各种大小</td><td>高 (&gt;100x)</td><td>中等</td><td>中–高</td></tr><tr><td>封端标签策略</td><td>配合上述使用</td><td>中等</td><td>低–中</td><td>中</td></tr></table><p>总体而言，化学选择性标签策略为大肽纯化提供了实用的解决方案。其中 Fmoc 色谱探针因操作简便、成本较低而最为实用。对于极其困难的纯化问题，可组合使用多种标签策略。</p><h3 id=s>本章要点总结</h3><p>大肽 (&gt;50 aa) 纯化的核心困难：粗产物复杂、色谱行为相近、分离度不足</p><p>化学选择性标签策略：&quot;标记 -&gt; 分离 -&gt; 去标签&quot;三步法</p><p>Fmoc 色谱探针：利用 Fmoc 疏水性增强 RP-HPLC 分离，去标签用标准哌啶条件——最简洁实用的方案</p><p>生物素亲和探针：利用生物素-链霉亲和素强相互作用，纯化倍数极高，但需设计可断裂连接臂</p><p>封端标签策略：用色谱标签封端未反应链，增大截短产物与目标肽的色谱差异</p><p>rat Cpn10 (101 aa) 的纯化验证了 Fmoc 探针策略的实用价值</p><p>标签策略可组合使用，针对不同纯化难题灵活选择</p></div><div class="pn"><a href="ch11.html"><b>← 上一章</b><span>第十一章
+Chemoselective and Orthogonal Ligation Techniques
+化学选择性与正交连接技术</span></a><a class="next" href="ch13.html"><b>下一章 →</b><span>1. 引言：SPPS 自动化的发展历程</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 7: Side Reactions on Amino Groups in Peptide Synthesis · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第7章（原书Ch7）</b></div><h2 class="pt">Chapter 7: Side Reactions on Amino Groups in Peptide Synthesis</h2><div class="meta">图示 22 张 · 笔记约 1371 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#s">章节概述</a><a href="#7-1-n">7.1 Nα-乙酰化副反应</a><a href="#7-2">7.2 三氟乙酰化副反应</a><a href="#7-3">7.3 甲酰化副反应</a><a href="#7-4-n">7.4 N-烷基化副反应</a><a href="#7-5-fmoc-osu-fmoc-ala-oh-fmoc-ala-aa-oh">7.5 Fmoc-OSu诱导的Fmoc-β-Ala-OH和Fmoc-β-Ala-AA-OH二肽形成</a><a href="#s-x">本章要点总结</a></div><p style="text-align:center;font-weight:700">Chapter 7: Side Reactions on Amino Groups in Peptide Synthesis</p><p>（氨基上的副反应）</p><h2 id=s>章节概述</h2><p>氨基是多肽合成中最通用的亲核试剂。由于其高反应性，氨基在合成过程中可能发生多种副反应，最常见的包括：乙酰化、三氟乙酰化、甲酰化和烷基化。这些副反应可发生在Nα脱保护、氨基酸偶联、侧链全局脱保护、Nα保护以及色谱纯化等步骤。</p><h2 id=7-1-n>7.1 Nα-乙酰化副反应</h2><p>乙酰化是SPPS中常见的副反应，导致肽链终止和截短肽杂质的形成。
+
+乙酰化来源：
+1. 有意的乙酸酐/吡啶封端处理：残留的乙酸酐可能存活过树脂洗涤步骤
+2. His残基介导的乙酰基迁移：His(Tos)过早脱保护→Ac-咪唑化物→Ac从Nim→Nα迁移终止肽链
+   也可发生Ac Nim→Lys-Nε迁移
+3. Arg胍基的乙酰化：单保护Arg(Tos)/Arg(NO₂)易受影响，但Arg(Pbf)有足够空间位阻
+4. 原料中残留乙酸/乙酸乙酯：在困难偶联（动力学慢）时竞争反应加剧
+5. 过度乙酰化：N-乙酰乙酰胺衍生物（双重乙酰化）
+
+抑制策略：
+- 严格控制原料中乙酸/乙酸乙酯含量（冻干、重结晶去除）
+- 降低乙酸酐化学计量、降温、缩短反应时间
+- 用较弱碱（吡啶）替代三乙胺</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_01.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.1  </em><em>肽</em><em>N</em><em>α</em><em>过度乙酰化副反应</em></p><h2 id=7-2>7.2 三氟乙酰化副反应</h2><p>三氟乙酰化比乙酰化更常见。TFA与Nα或Ser/Thr/Tyr羟基反应，生成三氟乙酰胺或三氟乙酸酯（分子量增加96 Da）。
+
+三氟乙酰化的来源和场景：</p><h3 id=7-2-1>7.2.1 片段缩合中的三氟乙酰化</h3><p>- 从固相载体切肽时大量TFA参与
+- 如果TFA未充分去除，在片段缩合中TFA被活化与氨基组分反应
+- 导致三氟乙酰化副产物4与目标产物3同时生成
+
+解决方案：
+- 用吡啶/DIEA中和过量TFA
+- 盐交换为非反应性阴离子（如Cl⁻）
+- 用HFIP/TFE替代TFA从CTC树脂切肽
+- 用HCl/二氧六环替代TFA脱Boc</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_02.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.2  </em><em>羟基和氨基上的三氟乙酰化</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_03.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.3  </em><em>片段缩合中肽</em><em>N</em><em>α</em><em>-</em><em>三氟乙酰化副反应</em></p><h3 id=7-2-2-o-n>7.2.2 羟甲基树脂上的酰基O→N迁移</h3><p>- Boc化学中，羟甲基树脂（如Wang树脂）的羟基与TFA酯化
+- DIEA中和时发生酰基O→N迁移，三氟乙酰基从树脂转移到肽Nα
+- N端Pro尤其容易发生（仲胺亲核性强，pKa高）
+
+抑制策略：
+- 用Fmoc-Pro-OH替换为Boc-Pro-OH（酸解时暂时形成氨基甲酸酯保护N端Pro）
+- 使用酸稳定性更强的羟甲基-Pam树脂
+- 缩短碱中和时间</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_04.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.4  </em><em>羟甲基树脂上酰基</em><em>O→N</em><em>迁移诱导的三氟乙酰化</em></p><h3 id=7-2-3-n-ser-thr>7.2.3 N端Ser/Thr诱导的三氟乙酰化</h3><p>- N端Ser/Thr的侧链羟基被TFA酯化
+- 后续碱性处理时发生酰基O→N迁移
+- 三氟乙酰基从Ser/Thr侧链转移到Nα
+- 内部Ser/Thr的三氟乙酰化可通过水解逆转，但N端位置更持久
+
+控制措施：
+- 控制全局脱保护时间（时间越长越严重）
+- 降低TFA浓度
+- 降低反应温度</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_05.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.5  N</em><em>端</em><em>Ser/Thr</em><em>诱导的</em><em>Nα-</em><em>三氟乙酰化</em></p><h2 id=7-3>7.3 甲酰化副反应</h2><p>甲酰化来源：(1) Trp(For)保护基；(2) 甲酸；(3) DMF溶剂杂质
+最易受影响的官能团：Trp吲哚侧链、Nα、Lys-Nε、His-Nim、Ser/Thr羟基</p><h3 id=7-3-1-trp-for>7.3.1 Trp(For)诱导的甲酰化</h3><p>- Boc化学中Trp常用甲酰保护（Trp(For)），具有极高酸稳定性甚至抗HF
+- HF/EDT或HF/2-巯基乙醇通过&quot;推-拉&quot;机理去除
+- 碱性条件（肼、NaOH、NaHCO₃、哌啶/DMF）也可去除
+- 去除不完全→残留Trp(For)（分子量增加28 Da）
+- 碱法脱保护时，释放的甲酰基可能修饰Lys-Nε或Nα
+
+解决方案：
+- 使用N,N&#x27;-二甲基乙二胺作为碱和甲酰淬灭剂
+- 可在再生Trp的同时将甲酰基转化为N-甲酰-N,N&#x27;-二甲基乙二胺</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_06.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.6  Boc-Trp(For)-OH</em><em>结构</em></p><h3 id=7-3-2>7.3.2 甲酸诱导的甲酰化</h3><p>- HCl/甲酸用于Boc脱保护：可导致Trp侧链甲酰化（可逆）
+- 酰基肼氧化为酰基叠氮时以甲酸作催化剂：导致肼甲酰化
+- CNBr降解（70%甲酸缓冲液）和-Asp-Pro-酸解（甲酸）中均可发生
+- 液相色谱纯化中0.1%甲酸作为流动相：浓缩后浓度升高加剧甲酰化
+
+注意：甲酸在0.1%浓度通常不会引起严重问题，但RP-HPLC组分浓缩后风险增大
+1M HCl处理可水解Nα-甲酰化产物（但可能导致肽酸解）</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_07.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.7  N,N&#x27;-</em><em>二甲基乙二胺介导</em><em>Trp(For)</em><em>脱保护</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_08.png" alt="图示"></figure><p><em>Figure 7.8  HCl/HCOOH</em><em>在</em><em>N</em><em>α</em><em>-Boc</em><em>脱保护步骤诱导</em><em>Trp</em><em>侧链甲酰化</em></p><h3 id=7-3-3-dmf>7.3.3 DMF诱导的甲酰化</h3><p>DMF是最常用的有机溶剂之一，但可能通过多种途径引起甲酰化：
+
+1. DMF降解产生甲酸：强酸/强碱/高温条件下水解
+   游离甲酸被偶联试剂活化后与氨基竞争反应
+
+2. DMF直接通过转酰胺化引起甲酰化：
+   - 室温DMF/Oxyma过夜→约2% Nα-甲酰化
+   - 80°C微波10 min→48% 甲酰化！
+   - NMP中无此问题
+
+3. Vilsmeier-Haack型反应：
+   - DMF+POCl₃/氯甲酸酯→氯代亚胺中间体→甲酰化
+   - 制备肽Nbz衍生物时检测到甲酰化杂质
+   - PyBroP/DMF也可通过类似机理将游离氨基转化为N-甲酰化合物
+
+4. 咪唑催化：CDI偶联释放的咪唑可催化DMF的甲酰转移
+
+建议：对DMF甲酰化敏感的反应，避免使用含三级酰胺的溶剂系统</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_09.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.11  </em><em>咪唑催化氨基酸</em><em>/</em><em>氨基酸酯被</em><em>DMF</em><em>甲酰化</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_10.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.12  Vilsmeier-Haack</em><em>反应机理</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_11.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.13  </em><em>肽</em><em>Nbz</em><em>衍生物上的甲酰化副反应</em></p><h2 id=7-4-n>7.4 N-烷基化副反应</h2><p>N-烷基化是常见副反应，可影响Nα及Lys、Arg、His、Trp侧链。</p><h3 id=7-4-1-n>7.4.1 氯甲基树脂诱导的N-烷基化</h3><p>- Merrifield树脂（氯甲基树脂）上未反应的氯甲基基团
+- 在后续SPPS中与游离Nα反应，形成截短序列
+- N端Pro尤其容易诱导此副反应</p><h3 id=7-4-2-n-n>7.4.2 Nα-氨基甲酸酯保护基脱除时的N-烷基化</h3><h4 id=fmoc-n-fm>Fmoc脱除 → Nα-Fm烷基化</h4><p>- DBF（9-亚甲基芴）未被哌啶充分淬灭→与游离Nα形成Nα-Fm杂质
+- 非亲核碱DBU不能淬灭DBF，只能在连续流系统中使用
+- 液相合成中需综合考虑：Fmoc脱除效率和DBF淬灭能力
+  推荐用二乙胺/二甲胺（高挥发性）或4-AMP/TAEA
+- 辛硫醇是优良的DBF淬灭剂</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_12.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.15  Fmoc</em><em>脱除过程中的</em><em>Nα-Fm</em><em>烷基化副反应</em></p><h4 id=boc-z>Boc/Z脱除时的烷基化</h4><p>- Bpoc酸解脱除：释放2-(4-联苯)异丙基阳离子→N-烷基化
+- Boc脱除：基本上不会引起显著的N-叔丁基化
+- 但Boc-Lys(Z)的TFA处理可导致：
+  · Lys-Nε脱Z（Nε-de-Z）
+  · Lys-Nε苄基化（Z降解的苄基阳离子）
+  · 可能通过分子内机理进行
+  → 推荐2,4-二氯苄氧羰基替代Z保护Lys-Nε</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_13.png" alt="图示"></figure><p><em>Figure 7.17  TFA</em><em>处理</em><em>Boc-Lys(Z)</em><em>时</em><em>Nε</em><em>脱</em><em>Z</em><em>和苄基化副反应</em></p><h3 id=7-4-3-n>7.4.3 全局脱保护中的N-烷基化</h3><h4 id=7-4-3-1-n>7.4.3.1 甲醛诱导的N-烷基化</h4><p>甲醛来源：His(Bum/Bom)保护基降解、溶剂杂质（甲醇、PEG）
+
+甲醛修饰的三种类型：
+1. N-羟甲基胺形成（+30 Da）
+2. 进一步脱水形成亚胺（+12 Da）
+3. 通过亚甲基桥交联两个氨基酸
+
+交联模式：
+- 伯胺（Nα、Lys-Nε）+甲醛→亚胺→与His/Trp/Tyr/Asn/Gln/Arg/Cys交联
+- Lys-Nε + Arg-Nδ,ω,ω&#x27;：双亚甲基桥交联（+24 Da）
+- Cys巯基 + Arg胍基：亚甲基桥交联
+
+分子内环化（N端氨基酸特有）：
+- N端Cys → 噻唑烷（Thz）
+- N端Trp → 四氢-β-咔啉羧酸
+- N端Lys(Nma) → 二氢喹唑啉酮
+- N端His → 四氢吡啶-3,4-咪唑-6-羧酸
+
+Eschweiler-Clarke反应：甲醛+甲酸协同→还原胺化→N-甲基化
+
+抑制策略：
+- 甲醛淬灭剂：Cys·HCl、羟胺化合物（HONH₂·HCl、MeONH₂·HCl）
+- 交联主要在高pH发生，酸介导的全局脱保护中基本抑制
+- 但纯化过程中可能发生（N-羟甲基保护基降解释放甲醛）</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_14.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.18  </em><em>胺与甲醛形成</em><em>N-</em><em>羟甲基胺和亚胺</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_15.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.20  </em><em>甲醛诱导</em><em>Lys</em><em>和</em><em>Arg</em><em>交联</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_16.png" alt="图示"></figure><p><em>Figure 7.23  </em><em>甲醛诱导</em><em>N</em><em>端</em><em>Cys/Trp/Lys(Nma)/His</em><em>交联</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_17.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.24  Eschweiler-Clarke</em><em>反应机理</em></p><h4 id=7-4-3-2-pd-0-n-alloc-n>7.4.3.2 Pd(0)催化N-Alloc脱除时的N-烷基化</h4><p>N-Alloc通过Pd(0)/亲核清除剂脱除，但可能引起N-烯丙基化副反应：
+
+机理1：再生氨基与阳离子π-烯丙基钯配合物竞争反应
+→ 质子化氨基抑制亲核性；大量烯丙基清除剂
+
+机理2：氢化物清除剂形成的烯丙基衍生物→再与胺反应
+→ 可逆过程
+
+机理3：无清除剂时Pd(0)催化的脱羧-重排→N-烯丙基胺
+→ 仲胺比伯胺更快；可进一步生成N,N-二烯丙基胺
+
+清除剂类型及效果：
+1. 氧型（羧酸、HOSu、HOBt）：效果不佳
+2. 氮型（吗啉、吡咯啉、哌啶、NMM）：可用
+3. 碳型（dimedone、1,3-二甲基巴比妥酸）：不可逆清除，效果优异
+4. 硫型（2-巯基苯甲酸）：可用
+5. 硅烷型（N-三甲基硅胺衍生物）：先形成硅烷氨基甲酸酯，避免副反应
+   但会引起Fmoc过早脱除
+6. 氢化物型（PhSiH₃、NaBH₄、NH₃·BH₃）：Pd(0)/PhSiH₃最常用
+   → 反应快、兼容性好、有效抑制N-烯丙基化</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_18.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.26  Pd(0)</em><em>催化</em><em>N-Alloc</em><em>脱除机理</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_19.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.27  </em><em>游离氨基攻击阳离子</em><em>π-</em><em>烯丙基钯配合物的</em><em>N-</em><em>烯丙基化</em></p><figure><img loading="lazy" src="../../media/side/ch07/ch07_20.png" alt="图示"></figure><p><em>Figure 7.29  Pd(0)</em><em>催化脱羧</em><em>-</em><em>重排形成</em><em>N-</em><em>烯丙基胺和</em><em>N,N-</em><em>二烯丙基胺</em></p><h3 id=7-4-4-n-his>7.4.4 N端His的丙酮诱导烯胺化</h3><p>- N端His的咪唑侧链在制备或纯化过程中可发生烯胺化
+- 丙酮是常见污染源（工业生产中用作清洁剂）
+- 反应器清洗不彻底→丙酮残留→修饰N端His的Nim
+- 产物：His-Nim-(prop-1-en-2-yl)，分子量增加40 Da
+- 选择性原因不明，可能涉及Nα参与
+
+提醒：N端His肽的工业生产需特别注意清洗和储存</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_21.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 7.31  </em><em>丙酮诱导</em><em>N</em><em>端</em><em>His</em><em>烯胺化</em></p><h2 id=7-5-fmoc-osu-fmoc-ala-oh-fmoc-ala-aa-oh>7.5 Fmoc-OSu诱导的Fmoc-β-Ala-OH和Fmoc-β-Ala-AA-OH二肽形成</h2><p>Fmoc-OSu是氨基酸Nα-Fmoc衍生化最常用的试剂，但其中的琥珀酰亚胺基团可引起副反应：
+
+机理：
+1. Fmoc-OSu被水或HOSu亲核攻击→中间体32/33
+2. 中间体33通过Lossen重排→异氰酸酯34
+3. 异氰酸酯与水/HOSu反应→氨基甲酸/氨基甲酸酯→降解为H-β-Ala-OSu
+4. 过量Fmoc-OSu将β-Ala衍生化为Fmoc-β-Ala-OSu
+5. Fmoc-β-Ala-OSu与未衍生化氨基酸反应→二肽Fmoc-β-Ala-Xaa-OH
+6. 同样路径也可生成Fmoc-β-Ala-OH
+
+这是Fmoc-OSu衍生化Fmoc-氨基酸产品的特征性杂质</p><figure><img loading="lazy" src="../../media/side/ch07/ch07_22.png" alt="图示"></figure><p><em>Figure 7.32  Fmoc-OSu</em><em>介导</em><em>Nα-Fmoc</em><em>衍生化中</em><em>Fmoc-β-Ala-OH/Fmoc-β-Ala-Xaa-OH</em><em>二肽形成机理</em></p><h2 id=s-x>本章要点总结</h2><table><tr><th>副反应类型</th><th>来源</th><th>影响</th><th>主要抑制策略</th></tr><tr><td>Nα-乙酰化</td><td>残留乙酸酐、His(Tos)介导Ac迁移、原料中乙酸</td><td>肽链终止（截短序列）</td><td>原料质控、降温、降化学计量、弱碱</td></tr><tr><td>Nα-三氟乙酰化</td><td>TFA残留、O→N迁移（树脂/Ser/Thr）、N端Pro敏感</td><td>+96 Da杂质</td><td>去除TFA（盐交换/中和）、控制时间/温度、Boc-Pro替代Fmoc-Pro</td></tr><tr><td>Nα-甲酰化</td><td>Trp(For)、甲酸、DMF（降解/转酰胺化/Vilsmeier-Haack）</td><td>+28 Da（Trp(For)残留）/ 甲酰化杂质</td><td>DMF→NMP、甲酰淬灭剂、避免甲酸作催化剂</td></tr><tr><td>N-烷基化（Fmoc脱除）</td><td>DBF未淬灭→Nα-Fm</td><td>肽链终止</td><td>足量哌啶、DBU仅限连续流、4-AMP/TAEA用于液相</td></tr><tr><td>N-烷基化（甲醛/Alloc）</td><td>甲醛交联、Pd(0)催化N-烯丙基化</td><td>多种修饰和交联产物</td><td>Cys·HCl淬灭甲醛、Pd(0)/PhSiH₃系统、β-双羰基清除剂</td></tr></table><p>学习日期：2026-04-12</p></div><div class="pn"><a href="ch06.html"><b>← 上一章</b><span>Chapter 6: Intramolecular Cyclization Side Reactions</span></a><a class="next" href="ch08.html"><b>下一章 →</b><span>Chapter 8: Side Reactions on Hydroxyl and Carboxyl Groups in Peptide Synthesis</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

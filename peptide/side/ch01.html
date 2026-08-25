@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>第1章完整学习笔记（含机理图） · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第1章（原书Ch1）</b></div><h2 class="pt">第1章完整学习笔记（含机理图）</h2><div class="meta">图示 13 张 · 笔记约 960 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#1-1-n-ac-n-alkyl-xaa">1.1  N-Ac-N-alkyl-Xaa基序的酸解</a><a href="#1-2-o-des-ser-thr">1.2  O-酰基异二肽引起的des-Ser/Thr杂质</a><a href="#1-3-n-acyl-n-alkyl-aib-xaa">1.3  -N-acyl-N-alkyl-Aib-Xaa-键的酸解</a><a href="#1-4-asp-pro">1.4  -Asp-Pro-键的酸解</a><a href="#1-5-1-10">1.5-1.10  其他片段化副反应</a><a href="#s">总结</a><a href="#1-9-deguanidination-side-reaction-on-arg">1.9 Deguanidination Side Reaction on Arg</a><a href="#1-10-dkp-formation-2-5-diketopiperazine">1.10 DKP Formation (2,5-Diketopiperazine)</a><a href="#chapter-1">Chapter 1 关键要点总结</a></div><p style="text-align:center;font-weight:700">第1章完整学习笔记（含机理图）</p><p><strong>书籍：</strong>Side Reactions in Peptide Synthesis (Yi Yang, 2015)
+<strong>章节：</strong>Chapter 1 - Peptide Fragmentation/Deletion Side Reactions
+<strong>学习日期：</strong>2026-03-19
+<strong>页码：</strong>第6-36页（共31页）</p><h2 id=1-1-n-ac-n-alkyl-xaa>1.1  N-Ac-N-alkyl-Xaa基序的酸解</h2><p><strong>【现象】</strong>含有N-Ac-N-alkyl-Xaa序列的多肽在TFA处理时发生酸解，N端残基被裂解为5元环衍生物。</p><p><strong>【案例】</strong>Arodyn 2在TFA全脱保护时发生N端Ac-N-Me-Phe酸解。</p><p><strong>【机理示意图】</strong></p><figure><img loading="lazy" src="../../media/side/ch01/ch01_01.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.1  N-Ac-N-alkyl-Xaa酸解机制</p><p><strong>【关键影响因素】</strong>
+• 温度：4°C可显著抑制酸解
+• 清除剂：无清除剂时酸解更严重
+• N-烷基氨基酸：促进顺式酰胺键形成
+• 取代基：乙酰基 vs 甲基氨基甲酸酯</p><p><strong>【预防措施】</strong>
+• 低温（4°C）进行TFA处理
+• 使用吸电子基团替代乙酰基
+• 优化反应条件</p><h2 id=1-2-o-des-ser-thr>1.2  O-酰基异二肽引起的des-Ser/Thr杂质</h2><p><strong>【背景】</strong>O-酰基异二肽Boc-Ser/Thr(Fmoc-Xaa)-OH用于困难多肽合成，通过碱诱导的酰基O→N转移破坏不利二级结构。</p><p><strong>【副反应】</strong>活化后发生β-消除，形成混合酸酐（Fmoc-Xaa-OH + Boc-(β-Me)∆Ala-OH），导致des-Ser/Thr缺失杂质。</p><p><strong>【机理示意图】</strong></p><figure><img loading="lazy" src="../../media/side/ch01/ch01_02.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.2  O-acyl isopeptide策略</p><figure><img loading="lazy" src="../../media/side/ch01/ch01_03.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.3  O-acyl异二肽诱导的Ser/Thr消除机制</p><p><strong>【关键发现】</strong>
+• 极性溶剂（DMF, NMP）促进β-消除
+• 非极性溶剂（DCM, CHCl3）抑制
+• HOBt/HOAt/HOOBt等添加剂影响不大
+• 与氨基酸类型无关</p><p><strong>【预防措施】</strong>
+• 使用非极性溶剂（DCM, CHCl3）进行活化和偶联
+• 快速偶联，避免长时间活化</p><h2 id=1-3-n-acyl-n-alkyl-aib-xaa>1.3  -N-acyl-N-alkyl-Aib-Xaa-键的酸解</h2><p><strong>【案例】</strong>环肽cyclo-[Phe-d-Trp-Lys-Thr-Phe-N-Me-Aib]在TFA/EDT处理时发生-N-Me-Aib-Phe-位点酸解，导致环开裂。</p><p><strong>【机理示意图】</strong></p><figure><img loading="lazy" src="../../media/side/ch01/ch01_04.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.4  环肽酸解案例</p><figure><img loading="lazy" src="../../media/side/ch01/ch01_05.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.5  N-acyl-N-alkyl-Aib-Xaa酸解机制</p><p><strong>【影响因素】</strong>
+• 溶剂极性：TFA/CH3CN (t1/2 = 1.1 h) vs TFA/DCM (t1/2 = 4.1 h)
+• 水含量：加水可降低酸解速率
+• 肽二级结构：刚性结构促进酸解</p><h2 id=1-4-asp-pro>1.4  -Asp-Pro-键的酸解</h2><p><strong>【现象】</strong>-Asp-Pro-肽键在酸性条件下不稳定，甚至在pH=4也可能发生酸解。</p><p><strong>【机理示意图】</strong></p><figure><img loading="lazy" src="../../media/side/ch01/ch01_06.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.8  -Asp-Pro-酸解机制</p><p><strong>【关键因素】</strong>
+• 局部肽二级结构：刚性转角结构促进酸解
+• 氢键网络：Asp侧链与Asn侧链形成氢键，促进亚胺中间体形成</p><p><strong>【案例】</strong>
+• E298D eNOS蛋白在-Asp298-Pro299-发生酸解
+• Cellulosomal scaffoldin蛋白含有3个-Asp-Pro-位点，只有-Asp57-Pro58-发生酸解（位于刚性转角）</p><h2 id=1-5-1-10>1.5-1.10  其他片段化副反应</h2><p><strong>1.5  </strong><strong>肽</strong><strong>N</strong><strong>端</strong><strong>H-His-Pro-Xaa-</strong><strong>基序的自降解</strong></p><p>N端His-Pro-Xaa序列发生自催化裂解，形成His-Pro-diketopiperazine</p><p><strong>1.6  </strong><strong>肽</strong><strong>C</strong><strong>端</strong><strong>N-Me-Xaa</strong><strong>的酸解</strong></p><p>C端N-Me-Xaa残基在酸处理时发生酸解，使用C端N-Me-Xaa酰胺替代酸可预防</p><p><strong>1.7  N</strong><strong>端</strong><strong>FITC</strong><strong>修饰肽的酸解</strong></p><p>N端FITC修饰的肽在TFA处理时发生酸解，使用间隔物（如ε-Ahx）可预防</p><p><strong>1.8  </strong><strong>硫代酰胺肽的酸解</strong></p><p>硫代酰胺肽在强酸中发生酸解，使用Fmoc化学、降低TFA浓度可预防</p><p><strong>1.9  Arg</strong><strong>的脱胍基化副反应</strong></p><p>Arg胍基侧链发生酰化后降解为Orn（-42 amu），使用合适保护基可预防</p><p><strong>1.10  DKP</strong><strong>（二酮哌嗪）形成</strong></p><p>肽链中的二肽单元发生环化形成DKP，导致二肽缺失</p><h2 id=s>总结</h2><p><strong>【关键要点】</strong></p><p>1. 酸解副反应的共性：大多数涉及分子内亲核攻击，形成五元或六元环中间体</p><p>2. 序列依赖性：某些序列组合（如-Asp-Pro-、N-Ac-N-alkyl-Xaa）特别容易发生片段化</p><p>3. 条件控制：温度、溶剂极性、酸浓度都会显著影响副反应程度</p><p>4. Fmoc vs Boc化学：对于酸敏感的肽，Fmoc化学（TFA）比Boc化学（HF）更温和</p><p><strong>【预防策略】</strong></p><p>• 识别高风险序列</p><p>• 优化合成条件（温度、溶剂、时间）</p><p>• 选择合适的保护基</p><p>• 使用MS和HPLC及时监控副产物</p><h2 id=1-9-deguanidination-side-reaction-on-arg>1.9 Deguanidination Side Reaction on Arg</h2><p>精氨酸（Arg）在肽合成中是一个相对特殊的氨基酸，其胍基侧链含有三个氨基基团（Nd, Nw, Nw&#x27;）。如果保护不当，这些氨基可能参与不需要的酰化反应，导致一系列副反应。</p><h3 id=arg>Arg结构特点</h3><p>• 胍基侧链含有三个氨基：Nd, Nw, Nw&#x27;</p><p>• 强碱性（pKa = 12.5）</p><p>• 在肽合成过程中通常保持质子化</p><p>• 如果保护不当，容易参与副反应</p><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.9.1 Arg保护基结构</p><figure><img loading="lazy" src="../../media/side/ch01/ch01_07.png" alt="图示"></figure><h3 id=s-x>副反应类型</h3><table><tr><th>副反应类型</th><th>机理</th><th>结果</th></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td>分子内环化</td><td>Arg侧链环化形成δ-内酰胺</td><td>Orn衍生物</td></tr><tr><td>过度酰化</td><td>未保护的Nw&#x27;被酰化</td><td>2-取代-5-取代-1H-咪唑-4(5H)-酮</td></tr><tr><td>碱诱导降解</td><td>酰化的Arg在碱性条件下降解</td><td>Orn衍生物（-42 amu）</td></tr></table><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.9.2 Arg副反应机理</p><figure><img loading="lazy" src="../../media/side/ch01/ch01_08.png" alt="图示"></figure><h3 id=s-x-x>保护基策略</h3><p>
+理想的保护策略：
+• Nd,w,w&#x27;-三保护：理论上可以完全抑制副反应
+• 但制备复杂，收率低，耦合效率差
+
+实际使用的保护基：
+• Nd,w-bis保护（如Boc2）：部分保护
+• Nw,w&#x27;-bis保护：避免酰化但易环化
+• 标准保护基：Pmc, Pbf（不能完全抑制δ-内酰胺形成）
+
+新型保护基：
+• Suben, Sub, MeSub：位阻大，酸敏感性高
+• Arg(NO2)：NO2的强吸电子效应降低胍基亲核性
+</p><h3 id=s-x-x-x>预防措施</h3><p>1. 在Fmoc脱保护和后续偶联之间，用0.25 M HOBt溶液冲洗肽树脂</p><p>2. 重新质子化Arg胍基，减少后续酰化</p><p>3. 避免使用弱碱性氨基酸衍生物（如H-Pro-OtBu）进行偶联</p><p>4. 选择合适的保护基策略</p><p>5. 根据合成条件选择Pmc/Pbf或新型保护基</p><h2 id=1-10-dkp-formation-2-5-diketopiperazine>1.10 DKP Formation (2,5-Diketopiperazine)</h2><p>DKP形成是肽合成中最严重的副反应之一，不仅影响肽制备过程，甚至可能在肽储存期间发生。DKP衍生物在药物设计中扮演重要角色，但在肽合成中会导致缺失序列杂质，显著降低收率并增加纯化难度。</p><h3 id=dkp>DKP结构</h3><p>
+DKP是6元环化合物：
+• 由N端二肽环化形成
+• 结构：环状二酮哌嗪
+• 稳定性高，难以去除
+• 形成后导致肽链缺失
+</p><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0">图1.10.1 DKP形成机理</p><figure><img loading="lazy" src="../../media/side/ch01/ch01_09.png" alt="图示"></figure><h3 id=s-x-x-x-x>形成机理</h3><p>
+DKP形成机理（4个步骤）：
+
+步骤1：N端氨基酸的氨基对第二个氨基酸的羰基进行亲核攻击
+步骤2：形成四面体中间体
+步骤3：酰胺键或酯键断裂
+步骤4：N端二肽以6元环DKP形式脱离肽链
+</p><h3 id=s-x-x-x-x-x>影响因素</h3><p>• 肽序列：N端二肽序列更容易形成DKP</p><p>• 氨基酸类型：Gly, Pro, D-Ala等容易形成DKP</p><p>• 温度：高温加速DKP形成</p><p>• pH值：碱性条件促进DKP形成</p><p>• 时间：长时间储存增加DKP风险</p><p>• 溶剂：极性溶剂可能加速DKP</p><h3 id=s-x-x-x-x-x-x>脱肽肽的特殊性</h3><p>
+脱肽肽更容易形成DKP：
+• 酯键比酰胺键更容易断裂
+• 羟基是更好的离去基团
+• 形成速率更快
+</p><figure><img loading="lazy" src="../../media/side/ch01/ch01_10.png" alt="图示"></figure><figure><img loading="lazy" src="../../media/side/ch01/ch01_11.png" alt="图示"></figure><figure><img loading="lazy" src="../../media/side/ch01/ch01_12.png" alt="图示"></figure><figure><img loading="lazy" src="../../media/side/ch01/ch01_13.png" alt="图示"></figure><h3 id=s-x-x-x-x-x-x-x>预防策略</h3><p>1. 优化N端氨基酸选择：避免容易形成DKP的氨基酸</p><p>2. 控制反应条件：低温、短时间</p><p>3. 使用空间位阻氨基酸：增加立体位阻，抑制环化</p><p>4. 优化储存条件：低温、干燥、避光</p><p>5. 快速纯化：减少储存时间</p><p>6. 使用保护基：如Dde保护N端氨基</p><h3 id=s-x-x-x-x-x-x-x-x>实际案例</h3><p><strong>案例</strong><strong>1</strong><strong>：固相合成中的</strong><strong>DKP</strong><strong>形成</strong><strong>
+</strong>问题：目标肽在树脂上发生DKP形成
+原因：N端为Gly-Pro，长时间反应
+解决：
+  • 缩短偶联时间
+  • 使用Dde保护N端
+  • 低温操作（4°C）
+结果：DKP形成减少90%
+收率：从60%提升到95%
+</p><p><strong>案例</strong><strong>2</strong><strong>：肽储存中的</strong><strong>DKP</strong><strong>
+</strong>问题：纯化后的肽在储存过程中形成DKP
+原因：室温储存，含有Gly-D-Ala序列
+解决：
+  • -20°C冷冻保存
+  • 干燥剂保存
+  • 避免反复冻融
+结果：3个月内未检测到DKP形成
+</p><h2 id=chapter-1>Chapter 1 关键要点总结</h2><p>✓ Arg副反应需要特别注意保护基选择</p><p>✓ DKP形成是肽合成中最严重的副反应之一</p><p>✓ 预防优于治疗：优化合成和储存条件</p><p>✓ 快速检测和处理：HPLC和MS分析至关重要</p><p>✓ 理解机理：掌握副反应机理有助于预防和诊断</p></div><div class="pn"><a class="next" href="ch02.html"><b>下一章 →</b><span>Chapter 2: β-Elimination Side Reactions（β-消除副反应）</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

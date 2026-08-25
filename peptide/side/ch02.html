@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 2: β-Elimination Side Reactions（β-消除副反应） · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第2章（原书Ch2）</b></div><h2 class="pt">Chapter 2: β-Elimination Side Reactions（β-消除副反应）</h2><div class="meta">图示 7 张 · 笔记约 447 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><p style="text-align:center;font-weight:700">Chapter 2: β-Elimination Side Reactions（β-消除副反应）</p><h2 id=s>定义</h2><p>β-Elimination is a group of common side reactions that predominantly affect peptides bearing an electron-withdrawing substituent located on the side chain Cβ position, e.g., Cys and phosphorylated Ser/Thr.</p><p>β-消除是一类常见的副反应，主要影响侧链Cβ位带有吸电子取代基的肽，如Cys和磷酸化的Ser/Thr。</p><p>这些肽在碱性条件下容易发生β-消除，导致Cβ位取代基的消除，形成脱氢丙氨酸（dehydroalanine）及相应的加成产物。</p><p>Cys侧链保护基和Fmoc脱保护碱是影响β-消除倾向的最重要因素。</p><h2 id=2-1-cys-sulfhydryl-side-chain-eliminatio>2.1 Cys Sulfhydryl Side Chain β-Elimination（Cys巯基侧链的β-消除）</h2><h3 id=2-1-1>2.1.1 机理</h3><p>Fmoc脱保护过程中的β-消除：</p><p>1. 哌啶（piperidine）作为碱，夺取Cys的α-H（Ha）</p><p>2. Cys侧链保护基（如StBu、Acm、Trt）发生β-消除</p><p>3. 形成脱氢丙氨酸（dehydroalanine）中间体</p><p>4. 哌啶进行Michael加成，生成3-(1-piperidinyl)alanine</p><p>5. 分子量增加+51 amu（如果使用4-methylpiperidine，增加+65 amu）</p><h3 id=s-x>β-消除机理图：</h3><figure><img loading="lazy" src="../../media/side/ch02/ch02_01.png" alt="图示"></figure><p>Figure 2.1 Piperidine-induced Cys β-elimination and subsequent piperidine addition (Page 38)</p><h3 id=2-1-2>2.1.2 影响因素</h3><p>1. Cys侧链保护基的影响：</p><p>   • β-消除倾向：Cys(StBu) ≥ Cys(Acm) &gt;&gt; Cys(Trt)</p><p>   • Trt保护基最稳定，几乎不发生β-消除</p><p>   • Acm保护基容易发生β-消除，约50%产物转化为杂质</p><p>   • StBu保护基最容易发生β-消除</p><figure><img loading="lazy" src="../../media/side/ch02/ch02_02.png" alt="图示"></figure><p>Figure 2.2 Cys side chain sulfhydryl protecting groups (Page 39)</p><p>2. 树脂类型的影响：</p><p>   • PEG/PS树脂优于PS树脂</p><p>   • PAC-PEG/PS树脂上使用Cys(Trt)，无β-消除杂质</p><p>   • PS树脂上使用Cys(Acm)，大量β-消除杂质</p><p>3. Cys位置的影响：</p><p>   • 主要影响C末端的Cys</p><p>   • Cys酰化后更容易发生β-消除（吸电子效应增强）</p><p>   • Fmoc-Cys(保护基)-resin不容易发生β-消除</p><p>   • 交换Cys和Ser的位置可以避免β-消除</p><p>4. 其他诱导β-消除的试剂：</p><p>   • P(Bu)3（Cys(StBu)侧链脱保护）</p><p>   • Na/liq. NH3（Cys(Bzl)侧链脱保护）</p><p>   • NaOH</p><p>   • Hydrazine（肼）</p><p>   • HF（强酸也能诱导）</p><figure><img loading="lazy" src="../../media/side/ch02/ch02_03.png" alt="图示"></figure><p>Figure 2.3 Proposed mechanism of the phosphine-induced Cys(StBu) side chain β-elimination (Page 40)</p><h3 id=2-1-3>2.1.3 预防策略</h3><p>1. 保护基选择：</p><p>   • 使用Cys(Trt)保护基</p><p>   • 避免使用Cys(Acm)和Cys(StBu)</p><p>   • 考虑使用新型保护基Xan（效果优于Trt）</p><p>2. 树脂选择：</p><p>   • 使用PEG/PS混合树脂</p><p>   • 避免使用纯PS树脂</p><p>3. Fmoc脱保护条件优化：</p><p>   • 降低哌啶浓度</p><p>   • 使用2% DBU/DMF + 连续流动脱保护</p><p>   • 缩短脱保护时间</p><p>   • 添加HOBt或HOAt（效果有限）</p><p>4. 特殊策略：</p><p>   • 巯基侧链固定在树脂上（Fmoc-Cys(2XAL4)-OtBu）</p><p>   • 如果发生β-消除，杂质会被洗掉，不污染产物</p><figure><img loading="lazy" src="../../media/side/ch02/ch02_04.png" alt="图示"></figure><p>Figure 2.4 Chemical structure of Fmoc-Cys(2XAL4)-OtBu (Page 40)</p><h2 id=2-2-phosphorylated-ser-thr-elimination-s>2.2 Phosphorylated Ser/Thr β-Elimination（磷酸化Ser/Thr的β-消除）</h2><h3 id=2-2-1>2.2.1 磷酸化肽合成方法</h3><p>磷酸化肽的合成主要有两种方法：</p><p>1. 使用预磷酸化氨基酸作为构建块</p><p>   • 双保护：Fmoc-Ser/Thr(PO3R2)-OH (R = Me, Et, tBu, Bzl)</p><p>   • 单保护：Fmoc-Ser/Thr(PO3R,H)-OH</p><p>2. 后合成全磷酸化</p><p>   • 对自由羟基进行磷酸化</p><figure><img loading="lazy" src="../../media/side/ch02/ch02_05.png" alt="图示"></figure><p>Figure 2.5 Chemical structure of Fmoc-Ser/Thr(PO3R2)-OH (Page 41)</p><h3 id=2-2-2>2.2.2 β-消除机理</h3><p>哌啶诱导的磷酸化Ser/Thr β-消除：</p><p>1. 哌啶夺取磷酸化Ser/Thr的α-H</p><p>2. 释放保护磷酸</p><p>3. 形成脱氢丙氨酸中间体</p><p>4. 哌啶加成，生成3-(1-piperidinyl)alanine</p><figure><img loading="lazy" src="../../media/side/ch02/ch02_06.png" alt="图示"></figure><p>Figure 2.6 Piperidine-induced Ser/Thr(PO3R2) β-elimination (Page 42)</p><h3 id=2-2-3-vs>2.2.3 单保护 vs 双保护</h3><p>双保护磷酸酯（Ser/Thr(PO3R2)）容易发生β-消除</p><p>单保护磷酸酯（Ser/Thr(PO3R,H)）更稳定：</p><p>   • 哌啶处理时，单保护会形成负离子</p><p>   • 负离子不利于β-消除</p><p>   • 因此单保护磷酸氨基酸更常用</p><figure><img loading="lazy" src="../../media/side/ch02/ch02_07.png" alt="图示"></figure><p>Figure 2.7 Chemical structure of Fmoc-Ser/Thr(PO3R,H)-OH (Page 43)</p><h3 id=2-2-4>2.2.4 影响因素</h3><p>1. 磷酸化氨基酸位置：</p><p>   • N末端的磷酸化氨基酸更容易发生β-消除</p><p>   • 内部位置的磷酸化氨基酸较稳定</p><p>   • 这与Cys的情况相反（Cys是C末端更容易）</p><p>2. 氨基酸类型：</p><p>   • Fmoc-Thr(PO3Bzl,H)比Fmoc-Ser(PO3Bzl,H)更稳定</p><p>   • Thr的β-甲基增加了位阻，降低了β-消除</p><p>3. Fmoc脱保护时间：</p><p>   • 时间越长，β-消除越多</p><p>   • 延长处理时间会显著增加杂质</p><p>4. 微波辐射：</p><p>   • 微波辐射（30s, 40W, 40°C）会大幅促进β-消除</p><p>   • 避免在Fmoc脱保护步骤使用微波</p><h3 id=2-2-5-fmoc>2.2.5 Fmoc脱保护试剂比较</h3><p>不同胺类对磷酸化肽β-消除的影响（从好到差）：</p><table><tr><th>胺类</th><th>浓度</th><th>粗产物纯度 (%)</th></tr><tr><td>CHA (环己胺)</td><td>50% CHA/DCM</td><td>85.8</td></tr><tr><td>DBU</td><td>5% DBU/DMF</td><td>83.5</td></tr><tr><td>Piperazine (哌嗪)</td><td>5% Piperazine/DMF</td><td>83.1</td></tr><tr><td>Morpholine (吗啉)</td><td>50% Morpholine/DMF</td><td>79.3</td></tr><tr><td>4-Methyl piperidine</td><td>20% 4-Methyl piperidine/DMF</td><td>80.5</td></tr><tr><td>Piperidine (哌啶)</td><td>20% Piperidine/DMF</td><td>73.6</td></tr><tr><td>Pyrrolidine (吡咯烷)</td><td>50% Pyrrolidine/DMF</td><td>55.9</td></tr></table><p>结论：CHA（环己胺）效果最好，哌啶和吡咯烷效果最差。</p><h3 id=2-2-6>2.2.6 预防策略</h3><p>1. 使用单保护磷酸化氨基酸：</p><p>   • Fmoc-Ser/Thr(PO3R,H)-OH</p><p>   • 比双保护更稳定</p><p>2. 选择合适的Fmoc脱保护试剂：</p><p>   • 首选：CHA（环己胺）</p><p>   • 次选：DBU、哌嗪、吗啉</p><p>   • 避免：哌啶、4-甲基哌啶、吡咯烷</p><p>3. 优化合成条件：</p><p>   • 缩短Fmoc脱保护时间</p><p>   • 避免微波辐射</p><p>   • 如果可能，避免N末端磷酸化氨基酸</p><h2 id=s-x-x>关键要点总结</h2><p>✅ β-消除影响Cys和磷酸化Ser/Thr</p><p>✅ Cys保护基选择：Trt &gt;&gt; Acm &gt; StBu</p><p>✅ 树脂选择：PEG/PS &gt; PS</p><p>✅ Cys位置：C末端更容易发生β-消除</p><p>✅ 磷酸化氨基酸：单保护 &gt; 双保护</p><p>✅ Fmoc脱保护试剂：CHA &gt; DBU &gt; 哌嗪 &gt; 哌啶</p><p>✅ 避免微波辐射和长时间处理</p><p>✅ 特殊策略：巯基侧链固定在树脂上</p></div><div class="pn"><a href="ch01.html"><b>← 上一章</b><span>第1章完整学习笔记（含机理图）</span></a><a class="next" href="ch03.html"><b>下一章 →</b><span>Chapter 3: Peptide Global Deprotection/Scavenger-Induced Side Reactions</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 11: Peptide Racemization · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第11章（原书Ch11）</b></div><h2 class="pt">Chapter 11: Peptide Racemization</h2><div class="meta">图示 0 张 · 笔记约 38 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><p style="text-align:center;font-weight:700">Chapter 11: Peptide Racemization</p><p>（多肽消旋化）</p><h2 id=11-1>11.1 消旋化机理</h2><h3 id=11-1-1-oxazol-5-4h-one>11.1.1 通过Oxazol-5(4H)-one（恶唑酮）中间体的消旋化</h3><p>这是最主要的消旋化途径。Nα-酰化的氨基酸在羧基活化后，若氨解反应缓慢，可转化为oxazolone中间体（保留手性）。但oxazolone的Hα可被碱夺去，形成阴离子，经共振稳定后重新质子化得到外消旋混合物。</p><p>关键前提：Nα上必须有酰基取代基（乙酰基、苯甲酰基、肽链等）。Nα-氨基甲酸酯保护（如Fmoc）的oxazolone较不易发生去质子化。</p><h3 id=11-1-2-enolate>11.1.2 通过烯醇盐（Enolate）形成的消旋化</h3><p>碳二亚胺介导的氨基酸活化中，O-酰基异脲中间体可经烯醇盐形成→分子内质子夺取→两性离子烯醇盐→互变异构为烯醇，导致消旋化。</p><h3 id=11-1-3-h>11.1.3 直接Hα夺取消旋化</h3><p>碱直接夺取Hα。主要影响：芳基甘氨酸（Phg，芳基稳定阴离子）、Cys（Cb上吸电子基团稳定阴离子）、His（咪唑侧链分子内夺取Hα）。游离羧基的屏蔽效应可降低此途径，但酯化后活化增强。</p><h3 id=11-1-4-aspartimide>11.1.4 通过天冬酰亚胺（Aspartimide）形成的消旋化</h3><p>Asp/Asn侧链参与形成天冬酰亚胺后，Hα酸性增强（去质子化阴离子经共振稳定），导致Asp/Asn快速消旋化。d-Asp在体内的形成速率通常高于其他氨基酸。</p><h3 id=11-1-5>11.1.5 酸催化消旋化</h3><p>强酸条件下可通过烯醇盐形成导致消旋化，高温时更显著。6N HCl水解用于氨基酸分析时也可引发消旋化。</p><h2 id=11-2>11.2 多肽合成中的消旋化</h2><h3 id=11-2-1>11.2.1 易消旋化氨基酸</h3><h4 id=11-2-1-1-his>11.2.1.1 组氨酸（His）</h4><p>His是最易消旋化的氨基酸之一。除常规oxazolone途径外，His还有独特机制：</p><p>• 未保护的Nπ可通过分子内自催化夺取Hα，形成阳离子His衍生物→互变或质子化→消旋化</p><p>• 未保护的Nπ可亲核进攻活化羧基，形成环状羰基咪唑化物中间体→消旋化</p><p>Nτ保护后Nπ仍可引发消旋化。</p><h4 id=11-2-1-2-cys>11.2.1.2 半胱氨酸（Cys）</h4><p>Cys衍生物极不耐消旋化，主要通过直接Hα夺取（碱存在下）。巯基保护基类型、偶联试剂、溶剂、碱、温度和预活化都显著影响消旋化程度。</p><p>• 通过酯键固定在树脂上的Cys在反复哌啶处理中可消旋化</p><p>• 通过酰胺键固定或Cys位于C端以外位置时，消旋化不明显</p><p>• 无碱或减碱条件下活化可降低消旋化</p><h4 id=11-2-1-3>11.2.1.3 糖基化氨基酸</h4><p>O-糖基化Ser/Thr在肽合成中极易消旋化。原因：</p><p>• 巨大空间位阻降低氨解速率，延长活性物种存在时间，加剧oxazolone形成</p><p>• 糖基取代基增强Hα被碱夺取的倾向（σ键/σ*反键轨道重叠增强）</p><p>• 大幅延长预活化时间可使消旋化产物占主导</p><h4 id=11-2-1-4-n-c>11.2.1.4 N-烷基氨基酸和Cα,α-二取代氨基酸</h4><p>N-烷基氨基酸在羧基活化时极易形成oxazolonium离子（类似oxazolone但带正电），即使无碱也可消旋化。低温（-5°C）可减轻。Cα,α-二取代氨基酸可形成oxazol-4(5H)-one导致消旋化。</p><h4 id=11-2-1-5>11.2.1.5 芳基甘氨酸衍生物</h4><p>Phg等芳基甘氨酸的芳基取代基可稳定阴离子中间体，使其极易通过直接Hα夺取消旋化。</p><h3 id=11-2-2-dmap>11.2.2 DMAP诱导的消旋化</h3><p>DMAP在催化酰化反应的同时可促进消旋化。在困难偶联中尤其显著。</p><h3 id=11-2-3>11.2.3 微波辐射诱导的消旋化</h3><p>微波加热可加速偶联反应，但同时也加速消旋化。需精确控制温度和反应时间。</p><h3 id=11-2-4>11.2.4 肽段缩合中的消旋化</h3><p>肽段缩合中，C端氨基酸的羧基活化可导致倒数第二个氨基酸（penultimate）消旋化，因为其Nα上有肽链酰基取代基，容易形成oxazolone。</p><h2 id=11-3>11.3 抑制消旋化的策略</h2><h3 id=11-3-1-n>11.3.1 Nα保护基的选择</h3><p>• 氨基甲酸酯类保护基（Fmoc、Boc、Cbz等）可降低oxazolone形成倾向</p><p>• Nsc（稳定性比Fmoc高3-10倍）和Msc是Fmoc的优秀替代品</p><p>• Nα-硫烷基保护基（如Npys）可抑制消旋化</p><p>• Nα-磺酰基保护基（如Nps）也有助于抑制消旋化</p><p>• Nα,Nα-双保护策略（如Boc₂-Xaa-OH）可彻底避免oxazolone形成</p><p>• α-叠氮酸作为氨基酸替代物（无手性Cα，不可能消旋化）</p><h3 id=11-3-2>11.3.2 侧链保护基的选择</h3><h4 id=11-3-2-1-cys>11.3.2.1 Cys侧链保护基</h4><p>三苯甲基（Trt）保护Cys巯基可降低消旋化，因其电子效应和空间位阻。N,S-保护的Cys活性酯消旋化程度与保护基类型密切相关。</p><h4 id=11-3-2-2-his>11.3.2.2 His侧链保护基</h4><p>常规Nτ保护不能完全抑制Nπ诱导的消旋化。Nπ保护基（如Bum、Bom）可更有效抑制但可能引入其他副反应。</p><h3 id=11-3-3>11.3.3 偶联试剂的选择</h3><p>• 氨基酸叠氮化物：经典低消旋化方法，但反应慢</p><p>• 氨基酸卤化物：Fmoc-Xaa-Cl比Boc/Z对应物消旋化倾向低</p><p>• 卤代鏻盐：PyBroP等，适合困难偶联且消旋化较低</p><p>• 铀盐：HATU是最优秀的偶联试剂之一，消旋化低</p><p>• UNCA（Nα-保护氨基酸N-羧基酸酐）：单官能团异构体，消旋化低</p><p>• DEPBT、DMTMM等：低消旋化偶联试剂</p><h3 id=11-3-4>11.3.4 偶联策略</h3><h4 id=11-3-4-1-pseudoproline>11.3.4.1 假脯氨酸（Pseudoproline）</h4><p>假脯氨酸二肽Fmoc-Xaa-Ser/Thr(CψMe,MePro)-OH可降低消旋化和困难序列问题。</p><h4 id=11-3-4-2-ncl>11.3.4.2 自然化学连接（NCL）</h4><p>通过硫酯与N端Cys的化学选择性连接，避免传统活化步骤的消旋化。</p><h3 id=11-3-5-11-3-9>11.3.5-11.3.9 其他策略</h3><p>• 溶剂：极性非质子溶剂（DMF、NMP）中消旋化较低</p><p>• 碱：减少碱用量或使用弱碱可降低消旋化</p><p>• 活化方式：避免预活化（延长活性物种存在时间增加消旋化）</p><p>• 温度：低温（-5°C至0°C）可显著降低消旋化</p><p>• Cu(II)盐添加剂：可抑制Cys消旋化</p><h2 id=s>本章要点总结</h2><p><strong>1. 消旋化是最有害的副反应之一，可显著影响肽的生物活性。</strong></p><p><strong>2. 主要机理：Oxazolone形成（最主要）、烯醇盐形成、直接Hα夺取、天冬酰亚胺形成、酸催化。</strong></p><p><strong>3. 最易消旋化的氨基酸：His、Cys、糖基化Ser/Thr、N-烷基氨基酸、芳基甘氨酸。</strong></p><p><strong>4. 抑制策略：合理选择Nα保护基、侧链保护基、偶联试剂、偶联策略、溶剂、碱、温度。</strong></p><p><strong>5. 核心原则：减少活性物种存在时间、降低碱性、低温操作、使用低消旋化偶联试剂。</strong></p></div><div class="pn"><a href="ch10.html"><b>← 上一章</b><span>Chapter 10: Redundant Amino Acid Coupling Side Reactions</span></a><a class="next" href="ch12.html"><b>下一章 →</b><span>Chapter 12: Side Reactions in Peptide Phosphorylation</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

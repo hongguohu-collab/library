@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 10: Redundant Amino Acid Coupling Side Reactions · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第10章（原书Ch10）</b></div><h2 class="pt">Chapter 10: Redundant Amino Acid Coupling Side Reactions</h2><div class="meta">图示 24 张 · 笔记约 1151 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#10-0">10.0 本章概述</a><a href="#10-1-n-fmoc">10.1 氨基酸Nα-Fmoc保护过程中的二肽形成</a><a href="#10-2-fmoc">10.2 Fmoc过早脱保护导致的冗余偶联</a><a href="#10-3">10.3 其他冗余偶联来源</a><a href="#10-4-gly">10.4 Gly冗余偶联的特殊问题</a><a href="#10-5">10.5 预防策略总结</a><a href="#s">关键要点</a></div><p style="text-align:center;font-weight:700">Chapter 10: Redundant Amino Acid Coupling Side Reactions</p><p>冗余氨基酸偶联副反应</p><h2 id=10-0>10.0 本章概述</h2><p>在多肽固相合成中，不完全偶联会导致缺失序列杂质。但另一方面，冗余氨基酸偶联（redundant amino acid coupling）也是一种常见的副反应，会导致肽链中出现不期望的重复氨基酸序列。
+
+冗余氨基酸偶联的来源包括：
+1. 氨基酸原料中的二肽杂质（Fmoc保护过程中的副产物）
+2. Fmoc过早脱保护（premature Fmoc deprotection）
+3. CTC树脂的酸解导致二聚体形成
+4. NCA（N-羧基环内酸酐）的形成
+
+其中，Gly的冗余偶联尤其棘手，因为Gly-HCl难以通过HPLC分离。</p><h2 id=10-1-n-fmoc>10.1 氨基酸Nα-Fmoc保护过程中的二肽形成</h2><p>Fmoc-Cl是最常用的氨基酸Nα-Fmoc保护试剂。在Schotten-Baumann条件下，Fmoc-Cl与Nα未保护的氨基酸反应生成Fmoc-Xaa-OH。
+
+但Fmoc-Cl存在一个严重问题：可能形成二肽甚至三肽杂质。机理如下：
+
+Fmoc-Xaa-OH可以与过量的Fmoc-Cl继续反应生成混合酸酐1，后者被未反应的H-Xaa-OH亲核攻击，形成二肽Fmoc-Xaa-Xaa-OH（2）。或者Fmoc-Cl先与H-Xaa-OH形成混合酸酐3，再经Fmoc-Cl衍生化后转化为二肽。
+
+空间位阻小的氨基酸（如Gly、Ala）更容易形成二肽杂质。</p><figure><img loading="lazy" src="../../media/side/ch10/ch10_01.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.1 Fmoc-Cl介导的氨基酸Nα-Fmoc保护反应</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_02.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.2 Fmoc-Cl保护过程中的二肽形成机理</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_03.png" alt="图示"></figure><p><em>Page 235 补充图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_04.png" alt="图示"></figure><p><em>Page 235 补充图</em></p><p>解决方案：
+- 使用反应活性较低的Fmoc衍生化试剂：Fmoc-N₃和Fmoc-OSu
+- Fmoc-N₃：活性太低，实际应用受限
+- Fmoc-OSu：可通过Lossen重排形成Fmoc-β-Ala-OH杂质（见Chapter 5.6和7.5）
+- Fmoc-2-MBT：活性低于Fmoc-OSu，可有效抑制二肽形成，副产物2-MBT易于分离
+- 固相Fmoc-OBt：将HOBt固载化后与Fmoc-Cl反应，生成的固相Fmoc-OBt与氨基酸反应释放产物，可完全避免二肽形成
+- 调整反应配比：增加氨基酸/Fmoc试剂的比例可抑制混合酸酐形成</p><figure><img loading="lazy" src="../../media/side/ch10/ch10_05.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.3 Fmoc-2-MBT结构</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_06.png" alt="图示"></figure><p><em>Page 236 补充图</em></p><h2 id=10-2-fmoc>10.2 Fmoc过早脱保护导致的冗余偶联</h2><p>Fmoc保护基在碱性条件下去除（通常用20%哌啶/DMF）。但某些条件下，Fmoc可能在偶联步骤中过早脱除，导致同一个氨基酸被偶联两次。
+
+过早脱保护的原因包括：
+1. 偶联试剂的碱性（如DIEA）
+2. 胺类杂质的存在
+3. 溶剂中的胺类污染（如DMF降解产生的二甲胺）
+
+当Fmoc在偶联过程中过早脱除后，裸露的Nα-氨基与新加入的活化氨基酸反应，形成冗余的二肽序列。</p><figure><img loading="lazy" src="../../media/side/ch10/ch10_07.png" alt="图示"></figure><p><em>Fmoc过早脱保护机理示意图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_08.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.4 相关机理图</em></p><h2 id=10-3>10.3 其他冗余偶联来源</h2><p>NCA（N-carboxyanhydride）形成：在某些条件下，活化的氨基酸可形成NCA，NCA具有两个反应位点，可导致冗余偶联。
+
+CTC（2-chlorotrityl chloride）树脂的酸解：CTC树脂在酸性条件下释放肽链时，可能发生分子间偶联，形成二聚体。
+
+DMF中的胺类污染：DMF在储存过程中可降解产生二甲胺，二甲胺可能导致Fmoc过早脱保护。</p><figure><img loading="lazy" src="../../media/side/ch10/ch10_09.png" alt="图示"></figure><p><em>NCA形成机理</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_10.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.5 相关机理图</em></p><h2 id=10-4-gly>10.4 Gly冗余偶联的特殊问题</h2><p>Gly的冗余偶联是最难处理的副反应之一，原因：
+- Gly没有侧链，空间位阻最小，最容易发生冗余偶联
+- Gly-HCl（质谱+58 Da或+72 Da杂质）在常规HPLC条件下难以与目标肽分离
+- Gly的缺失/冗余序列在RP-HPLC上共洗脱
+
+检测策略：
+- 使用MS检测确认是否有Gly冗余
+- 优化偶联条件减少冗余Gly引入</p><figure><img loading="lazy" src="../../media/side/ch10/ch10_11.png" alt="图示"></figure><p><em>Gly冗余偶联</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_12.png" alt="图示"></figure><p><em>Gly冗余偶联补充</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_13.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.6 Gly冗余偶联相关图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_14.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.7 相关机理图</em></p><h2 id=10-5>10.5 预防策略总结</h2><p>预防和控制冗余氨基酸偶联的策略：
+
+1. **原料质量控制**
+   - 使用高质量Fmoc-AA-OH原料
+   - 优先选择用Fmoc-OSu或Fmoc-2-MBT保护的氨基酸
+   - 必要时对原料进行HPLC检测
+
+2. **优化偶联条件**
+   - 控制偶联试剂用量（避免过量）
+   - 缩短偶联时间
+   - 选择合适的溶剂系统
+
+3. **防止Fmoc过早脱保护**
+   - 使用新鲜DMF（避免二甲胺污染）
+   - 控制DIEA用量
+   - 避免长时间暴露在碱性环境中
+
+4. **树脂选择**
+   - CTC树脂使用时注意酸解条件
+   - 控制酸解时间和浓度
+
+5. **检测和纯化**
+   - MS检测确认冗余序列
+   - 对于Gly冗余，可能需要特殊色谱条件</p><figure><img loading="lazy" src="../../media/side/ch10/ch10_15.png" alt="图示"></figure><p><em>预防策略相关图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_16.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.8 相关图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_17.png" alt="图示"></figure><p><em>补充图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_18.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.9 相关图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_19.png" alt="图示"></figure><p><em>Page 249 图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_20.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.10</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_21.png" alt="图示"></figure><p><em>Page 250 图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_22.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.11</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_23.png" alt="图示"></figure><p><em>Page 253 图</em></p><figure><img loading="lazy" src="../../media/side/ch10/ch10_24.png" alt="图示"></figure><p style="text-align:center;color:#93a0c2;font-size:12.5px;margin:4px 0"><em>Figure 10.12</em></p><h2 id=s>关键要点</h2><p><strong>✅ 冗余氨基酸偶联是多肽合成中的常见副反应
+✅ Fmoc-Cl保护过程可产生二肽杂质（Gly、Ala最易受影响）
+✅ Fmoc过早脱保护是冗余偶联的主要原因之一
+✅ CTC树脂酸解和NCA形成也可导致冗余偶联
+✅ Gly冗余最难处理（HPLC难分离）
+✅ 预防关键：原料质量、偶联条件优化、防止过早脱保护
+✅ 替代Fmoc-Cl的试剂：Fmoc-OSu、Fmoc-2-MBT、固相Fmoc-OBt</strong></p></div><div class="pn"><a href="ch09.html"><b>← 上一章</b><span>Chapter 9: Peptide Oxidation/Reduction Side Reactions</span></a><a class="next" href="ch11.html"><b>下一章 →</b><span>Chapter 11: Peptide Racemization</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>

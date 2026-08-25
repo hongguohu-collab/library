@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 4: Peptide Rearrangement Side Reactions · 多肽合成副反应</title><style>
+:root{--bg:#0b1020;--panel:#121a33;--line:#263056;--txt:#e6ecf8;--dim:#93a0c2;--acc:#7dd3fc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(60rem 32rem at 85% -10%,rgba(125,211,252,.10),transparent 60%),radial-gradient(48rem 26rem at -10% 110%,rgba(167,139,250,.09),transparent 60%);pointer-events:none}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{position:relative;max-width:900px;margin:0 auto;padding:0 20px 70px}
+.crumbs{font-size:12.5px;color:var(--dim);padding:20px 0 4px}
+.crumbs b{color:#c6d2ec;font-weight:600}
+.book-hero{padding:26px 0 14px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.book-hero .bt{font-size:26px;font-weight:800}
+.book-hero .bs{color:var(--dim);font-size:13.5px;margin-top:8px}
+.meta{font-size:12px;color:var(--dim);margin-top:10px}
+h2.pt{font-size:23px;font-weight:800;margin:8px 0 6px;line-height:1.5}
+.art{font-size:15px}
+.art h2{font-size:19px;margin:34px 0 12px;color:#bfe3ff;border-left:3px solid var(--acc);padding-left:12px;line-height:1.5}
+.art h3{font-size:16.5px;margin:26px 0 10px;color:#cfe3ff}
+.art h4{font-size:15px;margin:20px 0 8px;color:#dbe6ff}
+.art p{margin:10px 0;font-size:14.8px;color:#d5deef}
+.art figure{margin:20px auto;text-align:center;max-width:92%}
+.art img{max-width:100%;border-radius:10px;border:1px solid var(--line);background:#fff}
+.art figcaption{font-size:12px;color:var(--dim);margin-top:7px}
+.art table{border-collapse:collapse;margin:16px auto;font-size:13px;max-width:100%;display:block;overflow-x:auto}
+.art th,.art td{border:1px solid var(--line);padding:7px 12px;color:#cdd7ec;vertical-align:top}
+.art th{background:rgba(125,211,252,.10);color:#bfe3ff;font-weight:600}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:22px 0}
+.toc .tt{font-size:13px;color:var(--dim);margin-bottom:8px;letter-spacing:2px}
+.toc a{display:block;font-size:13.5px;padding:3px 0;color:#b9c8e6}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px}
+.pn a{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:10px 16px;flex:1;min-width:0}
+.pn a b{display:block;font-size:11px;color:var(--dim);margin-bottom:3px;font-weight:400}
+.pn a span{color:#d7e2f7;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pn .next{text-align:right}
+.shelf{max-width:1080px}
+.shelf-head{padding:56px 0 10px}
+.shelf-head h1{font-size:34px;font-weight:800;background:linear-gradient(90deg,#7dd3fc,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+.shelf-head .sub{color:var(--dim);font-size:14px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:28px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s;position:relative;overflow:hidden}
+.bcard:hover{transform:translateY(-3px);border-color:var(--bc,#7dd3fc);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.bcard .sp{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bc,#7dd3fc)}
+.bcard .bi{font-size:30px}
+.bcard .bn{font-size:17.5px;font-weight:700;line-height:1.5}
+.bcard .be{font-size:12px;color:var(--dim)}
+.bcard .bd{font-size:13px;color:#b7c3de;line-height:1.7}
+.bcard .bmeta{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px;border-top:1px dashed var(--line)}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px;margin-top:18px}
+.ccard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.15s;display:block}
+.ccard:hover{border-color:var(--bc,#7dd3fc);transform:translateY(-2px);text-decoration:none}
+.ccard .cn{font-size:11px;color:var(--bc,#7dd3fc);font-weight:700;letter-spacing:1px}
+.ccard .ct{font-size:13.5px;color:#dde5f5;margin-top:5px;line-height:1.55}
+footer{margin-top:56px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+@media(max-width:640px){.shelf-head h1{font-size:26px}.art p{font-size:14.5px}}
+</style></head><body><div class="wrap"><div class="crumbs"><a href="../../index.html">书架</a> › <a href="../side.html">多肽合成副反应</a> › <b>第4章（原书Ch4）</b></div><h2 class="pt">Chapter 4: Peptide Rearrangement Side Reactions</h2><div class="meta">图示 6 张 · 笔记约 597 KB · 来源《Peptide Synthesis Side Reactions》</div><div class="art"><div class="toc"><div class="tt">本章目录</div><a href="#s">章节概述</a><a href="#4-1-acid-catalyzed-acyl-n-o-migration-an">4.1 Acid Catalyzed Acyl N→O Migration and the Subsequent Peptide Acidolysis</a><a href="#4-2-base-catalyzed-acyl-o-n-migration">4.2 Base Catalyzed Acyl O→N Migration</a><a href="#s-x">关键要点总结</a><a href="#s-x-x">学习反思</a></div><p style="text-align:center;font-weight:700">Chapter 4: Peptide Rearrangement Side Reactions</p><p><strong>多肽重排副反应学习笔记</strong></p><p><strong>学习日期：</strong>2026-03-26
+<strong>章节：</strong>Chapter 4 - Peptide Rearrangement Side Reactions
+<strong>页码：</strong>第80-95页</p><h2 id=s>章节概述</h2><p><strong>核心问题：</strong>多肽合成和储存过程中的重排副反应是一类常见的副反应，由于多种官能团的存在和不同反应条件（如pH值变化），以及难以预测的立体协同效应，某些不稳定的多肽序列容易发生重排。</p><p><strong>主要挑战：</strong></p><p><strong>1. 分析难度大：</strong>重排产物通常与目标多肽是异构体，需要开发专门的分析方法</p><p><strong>2. 分离困难：</strong>某些重排过程导致含有冗余残基/片段的杂质，难以与目标产物分离</p><p><strong>3. 影响下游工艺：</strong>这些杂质给下游纯化过程带来压力</p><h2 id=4-1-acid-catalyzed-acyl-n-o-migration-an>4.1 Acid Catalyzed Acyl N→O Migration and the Subsequent Peptide Acidolysis</h2><h3 id=n-o>酸催化的酰基N→O迁移及随后的肽酸解</h3><figure><img loading="lazy" src="../../media/side/ch04/ch04_01.png" alt="图示"></figure><p><em>Figure 4.1: Proposed mechanism of acid-catalyzed peptide acyl N→O migration (Page 81)</em></p><h4 id=4-1-1>4.1.1 背景介绍</h4><p><strong>酰基迁移</strong>（Acyl migration）在有机化学中是一个常见过程，已被用于许多化合物的合成。其中<strong>O-酰基异肽合成策略</strong>（O-acyl isopeptide synthetic tactic）作为杰出代表，在肽制备领域获得了广泛应用，特别是对于那些因肽链聚集而复杂的合成。</p><p><strong>自然现象：</strong>蛋白质自催化降解（Protein autocatalytic degradation）- 某些含有特定序列的天然蛋白质会在某些位点发生断裂，被分解为不同片段。许多蛋白质自催化降解过程都是基于分子内N→O酰基迁移的化学基础，导致形成异构酯中间体。</p><p><strong>历史发现：</strong></p><p>• 最初在强酸（H₂SO₄、HF、HCl）处理底物的条件下被检测到</p><p>• 随着Fmoc化学的广泛应用，TFA催化的酰基N→O迁移成为肽合成中最常检测到的副反应之一</p><h4 id=4-1-2>4.1.2 反应机理</h4><p><strong>机理步骤（Figure 4.1）：</strong></p><p>1. 引发：Ser或Thr上的羟基对前置骨架酰胺键发起酸催化的亲核攻击</p><p>2. 中间体形成：生成5元环羟基噁唑烷中间体2</p><p>3. 重排：在酸性条件下重排为相应的酯异构体3</p><p>4. 替代路径：有观点认为浓H₂SO₄催化的酰基N→O迁移通过噁唑啉中间体进行</p><p><strong>可逆性：</strong>酸催化的酰基N→O迁移是可逆过程，在中性或碱性条件下可重新导向酰胺形成</p><p><strong>平衡驱动：</strong></p><p>• 酸性环境：释放的氨基基团的质子化是驱动平衡向酯形成方向的关键推动力</p><p>• 中性/碱性环境：酯3会经历快速的酰基O→N迁移，再生原始酰胺1</p><figure><img loading="lazy" src="../../media/side/ch04/ch04_02.png" alt="图示"></figure><p><em>Figure 4.2: Acidolysis of peptide containing -Xaa-Ser/Thr- unit (Page 82)</em></p><h4 id=4-1-3>4.1.3 实际案例</h4><p><strong>案例1：肽侧链全局脱保护过程中的酰基N→O迁移（Figure 4.2）</strong></p><p>过程：</p><p>1. 普通肽4经历侧链保护基裂解过程</p><p>2. 在-Xaa-Ser/Thr-序列位点发生伴随的酰基N→O迁移</p><p>3. 重排为相应的异构酯5</p><p>4. 酯5在水相条件下的合成、后处理、分离、纯化甚至储存过程中发生水解降解</p><p>5. 分解为肽片段6和7</p><figure><img loading="lazy" src="../../media/side/ch04/ch04_03.png" alt="图示"></figure><p><em>Figure 4.3: N→O acyl migration on Nα-Ac-Ser peptide and subsequent de-acetylation process (Page 82)</em></p><p><strong>案例2：N端Ac-Ser肽的N→O酰基迁移（Figure 4.3）</strong></p><p>过程：</p><p>1. 带有N-Ac-Ser基团的肽8的Nα-基团经历乙酸介导的乙酰化过程</p><p>2. 衍生的Nα-Ac-Ser肽随后经历TFA主导的肽侧链全局脱保护</p><p>3. N端Nα-Ac-Ser基团部分经历TFA催化的酰基N→O迁移</p><p>4. 产生异构的H-Ser(Ac)杂质9</p><p>5. 如果酯衍生物9经历进一步水解降解，可转化为脱乙酰化副产物10</p><h4 id=4-1-4>4.1.4 预防策略</h4><p><strong>针对酰基迁移易感肽产品合成的注意事项：</strong></p><p><strong>1. 避免强酸：</strong>尽可能避免使用HF、H₂SO₄、HCl和TFMSA等强酸</p><p><strong>2. </strong><strong>控制水的添加：</strong>如果在肽全局脱保护中不能省略强酸，应防止添加水作为清除剂或共溶剂</p><p><strong>3. 降低酸浓度：</strong>降低用于去除侧链保护基的酸浓度</p><p><strong>4. 缩短酸处理时间：</strong>酰基N→O迁移的程度直接与受影响肽的酸处理持续时间相关，理性缩短易感肽的酸应力可有效减少不良肽酯形成</p><p><strong>5. 纯化和储存过程中的谨慎：</strong>从RP-HPLC收集的产品级分应尽快进行冷冻干燥，或在后续处理之前中和</p><p><strong>6. 逆向恢复：</strong>在发生酰基N→O迁移的情况下，可通过用易去除的碱（如稀氨水溶液）处理受影响肽，将平衡逆转为酰胺形成方向</p><h2 id=4-2-base-catalyzed-acyl-o-n-migration>4.2 Base Catalyzed Acyl O→N Migration</h2><h3 id=o-n>碱催化的酰基O→N迁移</h3><figure><img loading="lazy" src="../../media/side/ch04/ch04_04.png" alt="图示"></figure><p><em>Figure 4.4: Proposed mechanism of base-catalyzed peptide acyl O→N migration (Page 84)</em></p><h4 id=4-2-1>4.2.1 基本概念</h4><p><strong>定义：</strong>碱催化的酰基O→N迁移可被视为酸催化的酰基N→O迁移的逆反应</p><p><strong>应用：</strong>肽合成中广泛应用的O-酰基异肽策略利用了酰基O→N迁移在碱性条件下的固有特征，从相应的酯前体再生目标酰胺产品</p><h4 id=4-2-2-figure-4-4>4.2.2 反应机理（Figure 4.4）</h4><p>机理步骤：</p><p>1. 起始：带有酯基团的肽11在碱的促进下</p><p>2. 亲核攻击：Nα对相关酯键发起亲核攻击</p><p>3. 中间体形成：形成5元环羟基噁唑烷中间体12</p><p>4. 开环转化：经历开环和转化为相应的酰胺异构体13</p><figure><img loading="lazy" src="../../media/side/ch04/ch04_05.png" alt="图示"></figure><p><em>Figure 4.5: Nα-trifluoroacetylation side reaction on N-terminal Ser/Thr peptide (Page 84)</em></p><h4 id=4-2-3>4.2.3 副反应来源</h4><p><strong>三氟乙酸</strong><strong>酯</strong><strong>副产物的形成：</strong></p><p><strong>Boc模式SPPS中的情况：</strong></p><p>• 用于Nα-Boc去除的TFA可能与树脂上残留的未酰化羟基基团反应</p><p>• 形成的三氟乙酰衍生物可能在随后的碱处理步骤引发酰基O→N迁移</p><p>• 三氟乙酰基团从羟基迁移到肽骨架上的Nα，导致形成Nα-三氟乙酰肽副产物</p><p><strong>N端Ser/Thr肽合成中的情况（Figure 4.5）：</strong></p><p>• 在肽侧链全局脱保护步骤，Ser/Thr上释放的羟基侧链可能被TFA官能化</p><p>• 形成H-Ser/Thr(TFA)-衍生物14</p><p>• 该中间体可能在随后的后处理或纯化过程中经历三氟乙酰O→N迁移</p><p>• 生成Nα-三氟乙酰化副产物15</p><figure><img loading="lazy" src="../../media/side/ch04/ch04_06.png" alt="图示"></figure><p><em>Figure 4.6: Base-catalyzed acyl O→N migration in cyclic peptide synthesis (Page 85)</em></p><h4 id=4-2-4>4.2.4 实际案例</h4><p><strong>环肽合成中的副反应（Figure 4.6）：</strong></p><p><strong>原始合成策略：</strong></p><p>1. 树脂上线性前体肽16用Pd(PPh₃)₄处理，去除Ally和Alloc保护基</p><p>2. 释放的羧基和氨基通过PyBOP介导的偶联形成环状中间体17</p><p>3. 用哌啶处理17以去除Thr-Nα上的Fmoc保护基，得到受保护的环肽18</p><p><strong>问题：</strong>中间体18在哌啶处理时经历了不良的酰基O→N迁移</p><p><strong>解决方案：</strong>采用Trt而不是Fmoc作为相关Thr的Nα-保护基，由于Nα-Trt可用稀酸溶液去除，碱催化剂相关的酰基O→N迁移的根本原因被专门解决</p><h2 id=s-x>关键要点总结</h2><p><strong>1. 酰基迁移是可逆过程：</strong></p><p>• 酸性条件：N→O迁移（酰胺→酯）</p><p>• 碱性/中性条件：O→N迁移（酯→酰胺）</p><p><strong>2. 主要影响因素：</strong></p><p>• pH值（酸/碱环境）</p><p>• 序列特异性（Ser、Thr、His等残基）</p><p>• 处理时间</p><p>• 温度</p><p>• 溶剂系统</p><p><strong>3. 预防策略：</strong></p><p>• 避免极端pH条件</p><p>• 缩短酸/碱处理时间</p><p>• 选择合适的保护基策略</p><p>• 优化纯化和储存条件</p><p><strong>4. 分析方法挑战：</strong></p><p>• 重排产物通常是目标产物的异构体</p><p>• 需要开发专门的检测方法</p><p>• 可能需要使用特殊色谱条件或质谱技术</p><h2 id=s-x-x>学习反思</h2><p><strong>本章的重要性：</strong></p><p>• 重排副反应是肽合成中常见但容易被忽视的问题</p><p>• 理解这些机理对于设计和优化合成路线至关重要</p><p>• 预防胜于治疗 - 在合成设计阶段就应考虑这些副反应</p><p><strong>实际应用价值：</strong></p><p>• 帮助识别合成中可能出现的杂质</p><p>• 指导保护基策略的选择</p><p>• 优化反应条件以减少副反应</p><p><strong>需要进一步学习的方向：</strong></p><p>• 更多实际案例研究</p><p>• 分析方法开发</p><p>• 新型保护基和合成策略</p></div><div class="pn"><a href="ch03.html"><b>← 上一章</b><span>Chapter 3: Peptide Global Deprotection/Scavenger-Induced Side Reactions</span></a><a class="next" href="ch05.html"><b>下一章 →</b><span>Chapter 5 氨基酸/肽羧基活化时的副反应</span></a></div></div>
+<footer>多肽合成学习书架 · 仅供个人学习参考 · 由 Claw 整理维护</footer></body></html>
